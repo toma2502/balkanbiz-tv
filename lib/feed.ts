@@ -10,7 +10,9 @@ export type FeedItem = Video & {
   isShort: boolean;
 };
 
-export async function getLatestFeed(limit = 60): Promise<FeedItem[]> {
+// Bez limit-a po defaultu — uzimamo sve što RSS feed dostavi (~15 po kanalu).
+// Ako se prosljedi limit, primjenjuje se na finalni sortirani niz.
+export async function getLatestFeed(limit?: number): Promise<FeedItem[]> {
   const items: FeedItem[] = [];
   const channels = data.channels.filter((c) => c.channelId);
 
@@ -18,7 +20,7 @@ export async function getLatestFeed(limit = 60): Promise<FeedItem[]> {
     channels.map(async (ch) => {
       try {
         const { regular, shorts } = await fetchChannelContent(ch.channelId!);
-        for (const v of regular.slice(0, 5)) {
+        for (const v of regular) {
           items.push({
             ...v,
             channelSlug: ch.id,
@@ -29,7 +31,7 @@ export async function getLatestFeed(limit = 60): Promise<FeedItem[]> {
             isShort: false,
           });
         }
-        for (const v of shorts.slice(0, 3)) {
+        for (const v of shorts) {
           items.push({
             ...v,
             channelSlug: ch.id,
@@ -46,7 +48,8 @@ export async function getLatestFeed(limit = 60): Promise<FeedItem[]> {
     })
   );
 
-  return items
-    .sort((a, b) => +new Date(b.published) - +new Date(a.published))
-    .slice(0, limit);
+  const sorted = items.sort(
+    (a, b) => +new Date(b.published) - +new Date(a.published)
+  );
+  return typeof limit === "number" ? sorted.slice(0, limit) : sorted;
 }
