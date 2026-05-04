@@ -26,16 +26,16 @@ export const HeroBg: React.FC = () => {
 
   return (
     <AbsoluteFill style={{ background: "#08080b", overflow: "hidden" }}>
-      {/* Ambient orbs */}
+      {/* Ambient orbs — pojačani */}
       <div
         style={{
           position: "absolute",
-          width: width * 0.7,
-          height: width * 0.7,
+          width: width * 0.85,
+          height: width * 0.85,
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(251,191,36,0.45), transparent 60%)",
-          filter: "blur(80px)",
+            "radial-gradient(circle, rgba(251,191,36,0.75), transparent 60%)",
+          filter: "blur(90px)",
           left: interpolate(t, [0, 0.5, 1], [-width * 0.3, width * 0.5, -width * 0.3]),
           top: interpolate(t, [0, 0.5, 1], [-height * 0.2, height * 0.4, -height * 0.2]),
         }}
@@ -43,12 +43,12 @@ export const HeroBg: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          width: width * 0.6,
-          height: width * 0.6,
+          width: width * 0.75,
+          height: width * 0.75,
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(168,85,247,0.25), transparent 60%)",
-          filter: "blur(100px)",
+            "radial-gradient(circle, rgba(168,85,247,0.5), transparent 60%)",
+          filter: "blur(110px)",
           right: interpolate(t, [0, 0.5, 1], [-width * 0.2, -width * 0.4, -width * 0.2]),
           bottom: interpolate(t, [0, 0.5, 1], [-height * 0.3, height * 0.2, -height * 0.3]),
         }}
@@ -56,14 +56,27 @@ export const HeroBg: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          width: width * 0.4,
-          height: width * 0.4,
+          width: width * 0.5,
+          height: width * 0.5,
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(56,189,248,0.18), transparent 65%)",
-          filter: "blur(70px)",
+            "radial-gradient(circle, rgba(56,189,248,0.4), transparent 65%)",
+          filter: "blur(80px)",
           left: interpolate(t, [0, 0.5, 1], [width * 0.6, width * 0.1, width * 0.6]),
           top: interpolate(t, [0, 0.5, 1], [height * 0.6, height * 0.1, height * 0.6]),
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          width: width * 0.55,
+          height: width * 0.55,
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle, rgba(244,114,182,0.35), transparent 65%)",
+          filter: "blur(90px)",
+          right: interpolate(t, [0, 0.5, 1], [width * 0.5, width * 0.1, width * 0.5]),
+          top: interpolate(t, [0, 0.5, 1], [height * 0.05, height * 0.5, height * 0.05]),
         }}
       />
 
@@ -71,7 +84,7 @@ export const HeroBg: React.FC = () => {
       {WORDS.map((word, i) => {
         const offset = (i / WORDS.length + t) % 1;
         const y = (offset * height * 1.4) - height * 0.2;
-        const opacity = interpolate(offset, [0, 0.1, 0.9, 1], [0, 0.07, 0.07, 0]);
+        const opacity = interpolate(offset, [0, 0.1, 0.9, 1], [0, 0.13, 0.13, 0]);
         return (
           <div
             key={word}
@@ -105,8 +118,8 @@ export const HeroBg: React.FC = () => {
               position: "absolute",
               left: x,
               top: y,
-              fontSize: 80,
-              opacity: 0.18,
+              fontSize: 96,
+              opacity: 0.32,
               filter: "blur(0.3px)",
             }}
           >
@@ -115,13 +128,13 @@ export const HeroBg: React.FC = () => {
         );
       })}
 
-      {/* Vignette */}
+      {/* Suptilna vignette */}
       <div
         style={{
           position: "absolute",
           inset: 0,
           background:
-            "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.65) 100%)",
+            "radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.45) 100%)",
         }}
       />
     </AbsoluteFill>

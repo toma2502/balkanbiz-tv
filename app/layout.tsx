@@ -30,6 +30,25 @@ export default function RootLayout({
         className="antialiased"
         style={{ fontFamily: "var(--font-inter), ui-sans-serif, system-ui" }}
       >
+        {/* Global ambient video — fixed iza cijele stranice */}
+        <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/hero-bg-poster.jpg"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ filter: "saturate(1.15) brightness(1.05)" }}
+            aria-hidden
+          >
+            <source src="/hero-bg.mp4" type="video/mp4" />
+          </video>
+          {/* Lakša overlay maska — propušta video, ali zadržava čitljivost teksta */}
+          <div className="absolute inset-0 bg-zinc-950/55" />
+          {/* Suptilni gradient na bottom za bolji prijelaz s footerom */}
+          <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-zinc-950 to-transparent" />
+        </div>
         <header className="border-b border-zinc-900/80 bg-zinc-950/70 backdrop-blur-md sticky top-0 z-50">
           <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2.5 group">
