@@ -37,7 +37,7 @@ export default function Home() {
             className="mt-10 text-lg sm:text-xl text-zinc-400 leading-[1.7] max-w-2xl fade-up"
             style={{ animationDelay: "100ms" }}
           >
-            Kurirana lista poduzetničkih, marketinških, financijskih i tech kanala iz Hrvatske, Srbije, BiH, Slovenije, Makedonije i Crne Gore. Bez algoritma. Bez praćenja. Bez oglasa.
+            Kurirana lista poduzetničkih, marketinških, financijskih i tech kanala iz Hrvatske, Srbije, BiH, Slovenije, Makedonije i Crne Gore. Bez algoritma. Bez praćenja. Bez ad-mreža.
           </p>
 
           <div

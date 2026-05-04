@@ -97,7 +97,7 @@ export default function RootLayout({
                   </span>
                 </div>
                 <p className="text-sm text-zinc-500 max-w-md leading-relaxed">
-                  Open-source kuriran katalog balkanskih poslovnih YouTube kanala. Bez algoritma, bez praćenja, bez oglasa.
+                  Open-source kuriran katalog balkanskih poslovnih YouTube kanala. Bez algoritma, bez praćenja, bez ad-mreža.
                 </p>
               </div>
               <div className="flex flex-col sm:items-end gap-2 text-sm">
@@ -116,7 +116,7 @@ export default function RootLayout({
                   O projektu →
                 </Link>
                 <span className="text-xs text-zinc-600 mt-2">
-                  MIT licenca · Ne hostamo videe · Bez oglasa
+                  MIT licenca · Ne hostamo videe · Bez ad-mreža
                 </span>
               </div>
             </div>
