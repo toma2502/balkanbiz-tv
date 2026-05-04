@@ -89,15 +89,15 @@ export default function ChannelsPage() {
   const countries = countryOrder.filter((c) => byCountry[c]);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-16 sm:py-24">
-      <div className="mb-16 max-w-3xl">
-        <div className="text-[11px] uppercase tracking-[0.2em] text-zinc-500 font-semibold mb-3">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16 lg:py-24">
+      <div className="mb-10 sm:mb-16 max-w-3xl">
+        <div className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-zinc-500 font-semibold mb-2 sm:mb-3">
           Katalog · {channels.length} kanala
         </div>
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-tight mb-4">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-3 sm:mb-4">
           Svi balkanski poslovni kanali
         </h1>
-        <p className="text-lg text-zinc-400 leading-relaxed">
+        <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
           Kurirano po prioritetu, zemlji i temi. Klikni karticu za pregled videa unutar BalkanBiza.
         </p>
       </div>
@@ -105,13 +105,13 @@ export default function ChannelsPage() {
       {countries.map((country) => {
         const list = byCountry[country];
         return (
-          <section key={country} className="mb-16">
-            <div className="flex items-baseline justify-between mb-6 sticky top-[64px] bg-zinc-950/80 backdrop-blur py-3 z-10 -mx-6 px-6 border-b border-zinc-900/60">
-              <h2 className="text-2xl font-bold tracking-tight flex items-center gap-3">
-                <span className="text-3xl">{COUNTRY_FLAGS[country]}</span>
+          <section key={country} className="mb-10 sm:mb-16">
+            <div className="flex items-baseline justify-between mb-5 sm:mb-6 sticky top-[56px] sm:top-[64px] bg-zinc-950/85 backdrop-blur py-2 sm:py-3 z-10 -mx-4 sm:-mx-6 px-4 sm:px-6 border-b border-zinc-900/60">
+              <h2 className="text-xl sm:text-2xl font-bold tracking-tight flex items-center gap-2 sm:gap-3">
+                <span className="text-2xl sm:text-3xl">{COUNTRY_FLAGS[country]}</span>
                 <span>{COUNTRY_NAMES[country]}</span>
-                <span className="text-sm font-normal text-zinc-500">
-                  · {list.length} {list.length === 1 ? "kanal" : "kanala"}
+                <span className="text-xs sm:text-sm font-normal text-zinc-500">
+                  · {list.length}
                 </span>
               </h2>
               <Link

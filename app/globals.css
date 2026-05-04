@@ -23,6 +23,15 @@ html {
   scroll-padding-top: 80px;
   background: var(--bg);
   color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 640px) {
+  html {
+    scroll-padding-top: 64px;
+  }
 }
 
 body {
@@ -34,6 +43,24 @@ body {
   letter-spacing: -0.011em;
   position: relative;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Reduce video bg performance impact on mobile */
+@media (max-width: 640px) {
+  video {
+    will-change: auto;
+  }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Subtle film grain overlay — Awwwards staple */

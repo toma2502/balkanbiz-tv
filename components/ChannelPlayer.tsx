@@ -53,16 +53,16 @@ export default function ChannelPlayer({
       </div>
 
       {/* Now playing */}
-      <div className="flex items-start justify-between gap-6">
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6">
         <div className="min-w-0 flex-1">
-          <div className="text-[11px] tracking-[0.2em] text-amber-400 mb-2 uppercase font-semibold">
+          <div className="text-[10px] sm:text-[11px] tracking-[0.2em] text-amber-400 mb-2 uppercase font-semibold">
             ▶ Trenutno gleda
           </div>
-          <h2 className="font-bold text-2xl sm:text-3xl leading-tight tracking-tight">
+          <h2 className="font-bold text-xl sm:text-2xl lg:text-3xl leading-tight tracking-tight">
             {selected.title}
           </h2>
           {selected.published && (
-            <div className="text-sm text-zinc-500 mt-2">
+            <div className="text-xs sm:text-sm text-zinc-500 mt-2">
               {channelName} · {timeAgo(selected.published)}
             </div>
           )}
@@ -71,7 +71,7 @@ export default function ChannelPlayer({
           href={`https://www.youtube.com/watch?v=${selected.id}`}
           target="_blank"
           rel="noopener"
-          className="shrink-0 text-xs uppercase tracking-wider px-4 py-2.5 rounded-full border border-zinc-800 hover:border-amber-400 hover:text-amber-400 text-zinc-400 transition-all whitespace-nowrap"
+          className="self-start shrink-0 text-xs uppercase tracking-wider px-4 py-2.5 rounded-full border border-zinc-800 hover:border-amber-400 hover:text-amber-400 text-zinc-400 transition-all whitespace-nowrap"
         >
           YouTube ↗
         </a>
@@ -140,8 +140,8 @@ function VideoSection({
       <div
         className={
           isShort
-            ? "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
-            : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+            ? "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4"
+            : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5"
         }
       >
         {videos.map((v, idx) => {

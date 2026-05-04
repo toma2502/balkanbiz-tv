@@ -12,21 +12,21 @@ export default function Home() {
   const featured = data.channels.filter((c) => c.priority === 1);
 
   return (
-    <div className="max-w-7xl mx-auto px-6">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6">
       {/* Hero */}
-      <section className="relative py-32 sm:py-44">
+      <section className="relative py-20 sm:py-32 lg:py-44">
         <div className="ambient-glow" aria-hidden />
         <div className="relative max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-zinc-800 bg-zinc-900/40 backdrop-blur text-[11px] uppercase tracking-[0.15em] text-zinc-400 mb-10 fade-up">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-zinc-800 bg-zinc-900/40 backdrop-blur text-[10px] sm:text-[11px] uppercase tracking-[0.15em] text-zinc-400 mb-6 sm:mb-10 fade-up">
             <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-            <span>Otvoreno kuriranje</span>
+            <span>Kuriranje</span>
             <span className="text-zinc-600">·</span>
             <span>{totalChannels} kanala</span>
             <span className="text-zinc-600">·</span>
             <span>{countries.length} zemalja</span>
           </div>
 
-          <h1 className="text-[clamp(2.75rem,7vw,5.5rem)] font-bold leading-[0.95] tracking-[-0.04em] fade-up">
+          <h1 className="text-[clamp(2.25rem,8vw,5.5rem)] font-bold leading-[0.98] tracking-[-0.04em] fade-up">
             Balkanski poslovni{" "}
             <span className="italic font-light text-zinc-500">YouTube,</span>
             <br />
@@ -34,19 +34,19 @@ export default function Home() {
           </h1>
 
           <p
-            className="mt-10 text-lg sm:text-xl text-zinc-400 leading-[1.7] max-w-2xl fade-up"
+            className="mt-6 sm:mt-10 text-base sm:text-xl text-zinc-400 leading-[1.6] sm:leading-[1.7] max-w-2xl fade-up"
             style={{ animationDelay: "100ms" }}
           >
             Kurirana lista poduzetničkih, marketinških, financijskih i tech kanala iz Hrvatske, Srbije, BiH, Slovenije, Makedonije i Crne Gore. Bez algoritma. Bez ad-mreža.
           </p>
 
           <div
-            className="mt-12 flex flex-wrap gap-3 fade-up"
+            className="mt-8 sm:mt-12 flex flex-col sm:flex-row gap-3 fade-up"
             style={{ animationDelay: "200ms" }}
           >
             <Link
               href="/kanali"
-              className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-amber-400 text-zinc-950 font-semibold hover:bg-amber-300 transition-colors text-sm"
+              className="group inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-amber-400 text-zinc-950 font-semibold hover:bg-amber-300 transition-colors text-sm w-full sm:w-auto"
             >
               Pregledaj kanale
               <span className="transition-transform group-hover:translate-x-1">→</span>
@@ -55,7 +55,7 @@ export default function Home() {
               href="https://github.com/toma2502/balkanbiz-tv"
               target="_blank"
               rel="noopener"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-zinc-800 hover:border-zinc-600 text-zinc-300 font-medium transition-colors text-sm"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full border border-zinc-800 hover:border-zinc-600 text-zinc-300 font-medium transition-colors text-sm w-full sm:w-auto"
             >
               Doprinesi na GitHubu
             </a>
@@ -64,13 +64,13 @@ export default function Home() {
       </section>
 
       {/* Categories */}
-      <section className="py-20 border-t border-zinc-900">
-        <div className="flex items-end justify-between mb-12">
+      <section className="py-12 sm:py-20 border-t border-zinc-900">
+        <div className="flex items-end justify-between mb-8 sm:mb-12">
           <div>
             <div className="text-[11px] uppercase tracking-[0.2em] text-zinc-500 font-semibold mb-3">
               01 / Kategorije
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
               Pronađi po temi
             </h2>
           </div>
@@ -88,7 +88,7 @@ export default function Home() {
               <Link
                 key={cat.id}
                 href={`/kategorija/${cat.id}`}
-                className="card-lift fade-up group block p-7 rounded-2xl border border-zinc-800/80 bg-gradient-to-br from-zinc-900/40 to-zinc-900/10 hover:border-amber-400/40 hover:bg-zinc-900/60 transition-all"
+                className="card-lift fade-up group block p-5 sm:p-7 rounded-2xl border border-zinc-800/80 bg-gradient-to-br from-zinc-900/40 to-zinc-900/10 hover:border-amber-400/40 hover:bg-zinc-900/60 transition-all"
                 style={{ animationDelay: `${i * 50}ms` }}
               >
                 <div className="flex items-start justify-between">
@@ -113,12 +113,12 @@ export default function Home() {
 
       {/* Featured */}
       {featured.length > 0 && (
-        <section className="py-20 border-t border-zinc-900">
-          <div className="mb-12">
+        <section className="py-12 sm:py-20 border-t border-zinc-900">
+          <div className="mb-8 sm:mb-12">
             <div className="text-[11px] uppercase tracking-[0.2em] text-zinc-500 font-semibold mb-3">
               02 / Istaknuto
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
               Najjači kanali u regiji
             </h2>
           </div>
@@ -127,7 +127,7 @@ export default function Home() {
               <Link
                 key={ch.id}
                 href={`/kanal/${ch.id}`}
-                className="card-lift fade-up group block p-7 rounded-2xl border border-amber-400/20 bg-gradient-to-br from-amber-400/[0.06] to-transparent hover:border-amber-400/50 transition-all"
+                className="card-lift fade-up group block p-5 sm:p-7 rounded-2xl border border-amber-400/20 bg-gradient-to-br from-amber-400/[0.06] to-transparent hover:border-amber-400/50 transition-all"
                 style={{ animationDelay: `${i * 70}ms` }}
               >
                 <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.15em] text-amber-400/80 mb-4 font-semibold">
@@ -150,12 +150,12 @@ export default function Home() {
       )}
 
       {/* By country */}
-      <section className="py-20 border-t border-zinc-900">
-        <div className="mb-12">
+      <section className="py-12 sm:py-20 border-t border-zinc-900">
+        <div className="mb-8 sm:mb-12">
           <div className="text-[11px] uppercase tracking-[0.2em] text-zinc-500 font-semibold mb-3">
             03 / Geografija
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
             Po zemljama
           </h2>
         </div>

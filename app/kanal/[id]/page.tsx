@@ -50,20 +50,20 @@ export default async function ChannelPage({
     .slice(0, 6);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
       <Link href="/kanali" className="text-sm text-zinc-500 hover:text-amber-400">
         ← Svi kanali
       </Link>
 
-      <div className="mt-6 mb-8">
-        <div className="flex items-center gap-2 text-sm text-zinc-500 mb-3">
+      <div className="mt-4 sm:mt-6 mb-6 sm:mb-8">
+        <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-zinc-500 mb-3">
           <span>
             {COUNTRY_FLAGS[ch.country]} {COUNTRY_NAMES[ch.country]}
           </span>
           {ch.priority === 1 && <span className="text-amber-400">★ Istaknuto</span>}
         </div>
-        <h1 className="text-4xl sm:text-5xl font-bold mb-4">{ch.name}</h1>
-        <p className="text-lg text-zinc-400 max-w-3xl leading-relaxed">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 tracking-tight">{ch.name}</h1>
+        <p className="text-base sm:text-lg text-zinc-400 max-w-3xl leading-relaxed">
           {ch.description}
         </p>
         <div className="mt-6 flex flex-wrap gap-2">
@@ -104,12 +104,12 @@ export default async function ChannelPage({
         </div>
       )}
 
-      <div className="flex flex-wrap gap-3 mt-8 mb-12">
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mt-6 sm:mt-8 mb-10 sm:mb-12">
         <a
           href={ch.url || `https://www.youtube.com/channel/${ch.channelId ?? ""}`}
           target="_blank"
           rel="noopener"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-zinc-800 hover:border-zinc-700 text-zinc-300 transition-colors"
+          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg border border-zinc-800 hover:border-zinc-700 text-zinc-300 transition-colors text-sm"
         >
           Pretplati se na YouTubeu ↗
         </a>
@@ -119,15 +119,15 @@ export default async function ChannelPage({
           )}&body=Kanal:%20${encodeURIComponent(ch.url)}`}
           target="_blank"
           rel="noopener"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-zinc-800 hover:border-zinc-700 text-zinc-300 transition-colors"
+          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg border border-zinc-800 hover:border-zinc-700 text-zinc-300 transition-colors text-sm"
         >
           Predloži ispravku
         </a>
       </div>
 
       {related.length > 0 && (
-        <section className="border-t border-zinc-900 pt-12">
-          <h2 className="text-xl font-semibold mb-6">Slični kanali</h2>
+        <section className="border-t border-zinc-900 pt-10 sm:pt-12">
+          <h2 className="text-lg sm:text-xl font-semibold mb-5 sm:mb-6">Slični kanali</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {related.map((r) => (
               <Link
