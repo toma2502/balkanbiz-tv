@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+
+const inter = Inter({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "BalkanBiz TV — Balkanski poslovni YouTube na jednom mjestu",
@@ -18,26 +25,31 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="hr">
-      <body className="bg-zinc-950 text-zinc-100 min-h-screen antialiased">
-        <header className="border-b border-zinc-800/80 bg-zinc-950/90 backdrop-blur sticky top-0 z-50">
+    <html lang="hr" className={inter.variable}>
+      <body
+        className="antialiased"
+        style={{ fontFamily: "var(--font-inter), ui-sans-serif, system-ui" }}
+      >
+        <header className="border-b border-zinc-900/80 bg-zinc-950/70 backdrop-blur-md sticky top-0 z-50">
           <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2 group">
-              <span className="text-2xl">📺</span>
-              <span className="font-bold text-lg group-hover:text-amber-400 transition-colors">
+            <Link href="/" className="flex items-center gap-2.5 group">
+              <span className="w-7 h-7 rounded-md bg-amber-400 text-zinc-950 flex items-center justify-center font-bold text-sm">
+                B
+              </span>
+              <span className="font-bold text-base tracking-tight group-hover:text-amber-400 transition-colors">
                 BalkanBiz<span className="text-amber-400">.tv</span>
               </span>
             </Link>
-            <div className="flex items-center gap-6 text-sm">
+            <div className="flex items-center gap-6 text-sm text-zinc-400">
               <Link
                 href="/kanali"
-                className="text-zinc-400 hover:text-amber-400 transition-colors"
+                className="hover:text-amber-400 transition-colors"
               >
-                Svi kanali
+                Kanali
               </Link>
               <Link
                 href="/o-projektu"
-                className="text-zinc-400 hover:text-amber-400 transition-colors hidden sm:inline"
+                className="hover:text-amber-400 transition-colors hidden sm:inline"
               >
                 O projektu
               </Link>
@@ -45,7 +57,7 @@ export default function RootLayout({
                 href="https://github.com/toma2502/balkanbiz-tv"
                 target="_blank"
                 rel="noopener"
-                className="text-zinc-400 hover:text-amber-400 transition-colors hidden sm:inline"
+                className="hover:text-amber-400 transition-colors hidden sm:inline"
               >
                 GitHub
               </a>
@@ -53,23 +65,42 @@ export default function RootLayout({
           </nav>
         </header>
         <main className="min-h-[80vh]">{children}</main>
-        <footer className="border-t border-zinc-800/80 mt-32 py-12 text-center text-sm text-zinc-500">
-          <div className="max-w-7xl mx-auto px-6 space-y-2">
-            <p>
-              Open source projekt · MIT licenca · Sav video sadržaj pripada svojim autorima i hosta se na YouTubeu.
-            </p>
-            <p className="text-zinc-600">
-              <a
-                href="https://github.com/toma2502/balkanbiz-tv"
-                target="_blank"
-                rel="noopener"
-                className="hover:text-amber-400"
-              >
-                Doprinesi na GitHubu
-              </a>
-              {" · "}
-              Ne hostamo videe · Ne pratimo korisnike · Bez oglasa
-            </p>
+        <footer className="border-t border-zinc-900/80 mt-32">
+          <div className="max-w-7xl mx-auto px-6 py-16">
+            <div className="flex flex-col sm:flex-row items-start justify-between gap-8">
+              <div>
+                <div className="flex items-center gap-2.5 mb-4">
+                  <span className="w-7 h-7 rounded-md bg-amber-400 text-zinc-950 flex items-center justify-center font-bold text-sm">
+                    B
+                  </span>
+                  <span className="font-bold text-base tracking-tight">
+                    BalkanBiz<span className="text-amber-400">.tv</span>
+                  </span>
+                </div>
+                <p className="text-sm text-zinc-500 max-w-md leading-relaxed">
+                  Open-source kuriran katalog balkanskih poslovnih YouTube kanala. Bez algoritma, bez praćenja, bez oglasa.
+                </p>
+              </div>
+              <div className="flex flex-col sm:items-end gap-2 text-sm">
+                <a
+                  href="https://github.com/toma2502/balkanbiz-tv"
+                  target="_blank"
+                  rel="noopener"
+                  className="text-zinc-400 hover:text-amber-400"
+                >
+                  Doprinesi na GitHubu →
+                </a>
+                <Link
+                  href="/o-projektu"
+                  className="text-zinc-400 hover:text-amber-400"
+                >
+                  O projektu →
+                </Link>
+                <span className="text-xs text-zinc-600 mt-2">
+                  MIT licenca · Ne hostamo videe · Bez oglasa
+                </span>
+              </div>
+            </div>
           </div>
         </footer>
       </body>
