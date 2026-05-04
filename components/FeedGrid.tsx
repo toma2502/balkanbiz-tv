@@ -8,6 +8,35 @@ import { COUNTRY_FLAGS, COUNTRY_NAMES, data } from "@/lib/data";
 
 type FilterType = "all" | "regular" | "short";
 
+// Score-based related videos: same channel > shared categories > same country
+function computeRelated(
+  active: FeedItem,
+  items: FeedItem[],
+  limit: number
+): FeedItem[] {
+  return items
+    .filter((v) => v.id !== active.id)
+    .map((v) => {
+      let score = 0;
+      if (v.channelSlug === active.channelSlug) score += 50;
+      const sharedCats = v.channelCategories.filter((c) =>
+        active.channelCategories.includes(c)
+      ).length;
+      score += sharedCats * 12;
+      if (v.country === active.country) score += 5;
+      if (v.isShort === active.isShort) score += 2;
+      // Slight recency boost
+      const daysOld =
+        (Date.now() - +new Date(v.published)) / (1000 * 60 * 60 * 24);
+      score -= Math.min(daysOld / 30, 3); // light recency penalty
+      return { v, score };
+    })
+    .filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map((x) => x.v);
+}
+
 export default function FeedGrid({ items }: { items: FeedItem[] }) {
   const [filterType, setFilterType] = useState<FilterType>("all");
   const [filterCountry, setFilterCountry] = useState<string>("all");
@@ -90,48 +119,129 @@ export default function FeedGrid({ items }: { items: FeedItem[] }) {
       </div>
 
       {/* Inline player modal */}
-      {activeVideo && (
-        <div
-          className="fixed inset-0 z-[80] bg-black/85 backdrop-blur-md p-4 sm:p-8 flex items-center justify-center"
-          onClick={() => setActiveVideo(null)}
-        >
-          <div
-            className="w-full max-w-5xl space-y-4"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="aspect-video rounded-2xl overflow-hidden border border-zinc-800 bg-black">
-              <iframe
-                key={activeVideo.id}
-                src={`https://www.youtube.com/embed/${activeVideo.id}?autoplay=1&rel=0&modestbranding=1`}
-                title={activeVideo.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-            <div className="flex items-start justify-between gap-4">
-              <div className="min-w-0">
-                <h2 className="font-bold text-lg sm:text-xl text-zinc-100 leading-tight">
-                  {activeVideo.title}
-                </h2>
-                <Link
-                  href={`/kanal/${activeVideo.channelSlug}`}
-                  className="text-sm text-amber-400 hover:underline mt-1 inline-block"
-                  onClick={() => setActiveVideo(null)}
+      {activeVideo &&
+        (() => {
+          const related = computeRelated(activeVideo, items, 12);
+          return (
+            <div
+              className="fixed inset-0 z-[80] bg-black/85 backdrop-blur-md overflow-y-auto"
+              onClick={() => setActiveVideo(null)}
+            >
+              <div className="min-h-full flex items-start justify-center p-4 sm:p-8">
+                <div
+                  className="w-full max-w-5xl space-y-6"
+                  onClick={(e) => e.stopPropagation()}
                 >
-                  {activeVideo.channelName} ↗
-                </Link>
+                  <div className="aspect-video rounded-2xl overflow-hidden border border-zinc-800 bg-black shadow-2xl shadow-black/70">
+                    <iframe
+                      key={activeVideo.id}
+                      src={`https://www.youtube.com/embed/${activeVideo.id}?autoplay=1&rel=0&modestbranding=1`}
+                      title={activeVideo.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  </div>
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="min-w-0">
+                      <h2 className="font-bold text-lg sm:text-2xl text-zinc-100 leading-tight tracking-tight">
+                        {activeVideo.title}
+                      </h2>
+                      <div className="mt-2 flex items-center gap-2 text-sm text-zinc-400">
+                        {activeVideo.channelAvatar && (
+                          <img
+                            src={activeVideo.channelAvatar}
+                            alt=""
+                            className="w-6 h-6 rounded-full object-cover ring-1 ring-zinc-800"
+                          />
+                        )}
+                        <Link
+                          href={`/kanal/${activeVideo.channelSlug}`}
+                          className="hover:text-amber-400"
+                          onClick={() => setActiveVideo(null)}
+                        >
+                          {activeVideo.channelName}
+                        </Link>
+                        <span className="text-zinc-600">·</span>
+                        <span>{timeAgo(activeVideo.published)}</span>
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => setActiveVideo(null)}
+                      className="shrink-0 text-xs uppercase tracking-wider px-4 py-2 rounded-full border border-zinc-800 hover:border-amber-400 hover:text-amber-400 text-zinc-400 transition-all"
+                    >
+                      Zatvori ✕
+                    </button>
+                  </div>
+
+                  {/* Related */}
+                  {related.length > 0 && (
+                    <div className="border-t border-zinc-900 pt-6">
+                      <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 mb-5">
+                        Slični videozapisi
+                      </h3>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {related.map((r) => (
+                          <button
+                            key={r.id + r.channelSlug}
+                            onClick={() => {
+                              setActiveVideo(r);
+                              window.scrollTo({ top: 0, behavior: "smooth" });
+                            }}
+                            className="text-left group rounded-xl overflow-hidden border border-zinc-800/80 bg-zinc-900/40 hover:border-amber-400/50 transition-all"
+                          >
+                            <div className="relative aspect-video bg-zinc-900 overflow-hidden">
+                              <img
+                                src={
+                                  r.isShort
+                                    ? `https://i.ytimg.com/vi/${r.id}/hqdefault.jpg`
+                                    : r.thumbnail
+                                }
+                                alt={r.title}
+                                loading="lazy"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                              />
+                              {r.isShort && (
+                                <span className="absolute top-2 left-2 z-10 text-[9px] tracking-[0.15em] uppercase font-bold text-zinc-950 bg-amber-400 px-1.5 py-0.5 rounded">
+                                  Short
+                                </span>
+                              )}
+                              <span className="absolute top-2 right-2 z-10 text-[10px] text-zinc-300 bg-zinc-950/80 backdrop-blur px-1.5 py-0.5 rounded">
+                                {COUNTRY_FLAGS[r.country]}
+                              </span>
+                            </div>
+                            <div className="p-3 flex gap-3">
+                              {r.channelAvatar ? (
+                                <img
+                                  src={r.channelAvatar}
+                                  alt=""
+                                  className="w-8 h-8 rounded-full object-cover ring-1 ring-zinc-800 shrink-0"
+                                />
+                              ) : (
+                                <div className="w-8 h-8 rounded-full bg-amber-400/20 ring-1 ring-amber-400/30 shrink-0" />
+                              )}
+                              <div className="min-w-0 flex-1">
+                                <h4 className="font-semibold text-xs leading-snug line-clamp-2 text-zinc-100 group-hover:text-amber-400 transition-colors">
+                                  {r.title}
+                                </h4>
+                                <div className="text-[10px] text-zinc-500 mt-1 truncate">
+                                  {r.channelName}
+                                </div>
+                                <div className="text-[10px] text-zinc-600">
+                                  {timeAgo(r.published)}
+                                </div>
+                              </div>
+                            </div>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
-              <button
-                onClick={() => setActiveVideo(null)}
-                className="shrink-0 text-xs uppercase tracking-wider px-4 py-2 rounded-full border border-zinc-800 hover:border-amber-400 hover:text-amber-400 text-zinc-400 transition-all"
-              >
-                Zatvori ✕
-              </button>
             </div>
-          </div>
-        </div>
-      )}
+          );
+        })()}
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
