@@ -9,7 +9,7 @@ import {
 import { fetchChannelVideos } from "@/lib/youtube";
 import ChannelPlayer from "@/components/ChannelPlayer";
 
-export const revalidate = 3600;
+export const revalidate = 600;
 
 export async function generateStaticParams() {
   return data.channels.map((c) => ({ id: c.id }));

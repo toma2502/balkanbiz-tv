@@ -11,7 +11,7 @@ export async function fetchChannelVideos(channelId: string): Promise<Video[]> {
   try {
     const res = await fetch(
       `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`,
-      { next: { revalidate: 3600 }, headers: { "User-Agent": "Mozilla/5.0" } }
+      { next: { revalidate: 600 }, headers: { "User-Agent": "Mozilla/5.0" } }
     );
     if (!res.ok) return [];
     const xml = await res.text();
