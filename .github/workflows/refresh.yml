@@ -1,8 +1,9 @@
-name: Refresh channel cache
+name: Refresh channel + feed cache
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    # Svaka 2 sata — sigurno svjeze, nije cesto da pojeli quota
+    - cron: "0 */2 * * *"
   workflow_dispatch:
 
 jobs:
@@ -11,4 +12,4 @@ jobs:
     steps:
       - name: Trigger Vercel revalidation
         run: |
-          curl -fsS "https://balkanbiz-tv-app.vercel.app/api/cron/refresh"
+          curl -fsS "https://balkanbiz.live/api/cron/refresh"
