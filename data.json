@@ -220,118 +220,6 @@
       "description": "Bosanski podcast o marketingu, produktivnosti, prodaji i online brandingu."
     },
     {
-      "id": "sbc",
-      "name": "SBC - Klub slovenskih podjetnikov",
-      "country": "SI",
-      "language": "sl",
-      "url": "https://www.youtube.com/@sbc-klubslovenskihpodjetnikov",
-      "handle": "sbc-klubslovenskihpodjetnikov",
-      "categories": [
-        "poduzetnistvo",
-        "liderstvo"
-      ],
-      "description": "450+ slovenskih poduzetnika dijeli iskustva, brojeve i odluke iz prakse.",
-      "priority": 1,
-      "channelId": "UCZl3sRNY1Efy8txjJRgCr4g",
-      "avatar": "https://yt3.googleusercontent.com/UXijCbl-xCHs28Mb4QEQLP55pupiwXmJs__MpCjPX3IJtGxQy8qVpbZMIrqn4ANvZASYmoJL=s240-c-k-c0x00ffffff-no-rj"
-    },
-    {
-      "id": "zavod-mladi",
-      "name": "Zavod mladi podjetnik",
-      "country": "SI",
-      "language": "sl",
-      "url": "https://www.youtube.com/channel/UCsN65I5LElgxGDYAazr1ykA",
-      "channelId": "UCsN65I5LElgxGDYAazr1ykA",
-      "categories": [
-        "poduzetnistvo",
-        "edukacija"
-      ],
-      "description": "Slovenska neprofitna organizacija za podršku mladim poduzetnicima.",
-      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_n3XyjOUgkQKyZagKdbnwfaVvLMhznqNzVn3BLCUTD_IA=s240-c-k-c0x00ffffff-no-rj"
-    },
-    {
-      "id": "zan-nekrep",
-      "name": "Žan Nekrep",
-      "country": "SI",
-      "language": "sl",
-      "url": "https://zannekrep.net/youtube/",
-      "categories": [
-        "poduzetnistvo",
-        "marketing"
-      ],
-      "description": "Slovenski poduzetnik (Kužek & Mucek) — biznis intervjui i osobni razvoj."
-    },
-    {
-      "id": "filip-pesek",
-      "name": "Filip Pesek",
-      "country": "SI",
-      "language": "sl",
-      "url": "https://filippesek.com/",
-      "categories": [
-        "poduzetnistvo",
-        "edukacija"
-      ],
-      "description": "Mentor2Millions workshops — izlazak iz stagnacije za poduzetnike.",
-      "channelId": "UCVLpfMs96l3DEcABHQuKpLg",
-      "avatar": "https://yt3.googleusercontent.com/naONoYQ9bEjo27oejilHrJaIjf4GYB5Vn6bUZwYtYtfuua9HTYsgNnLWcsC1OdLZvPcV1bWF=s240-c-k-c0x00ffffff-no-rj"
-    },
-    {
-      "id": "smiljan-mori",
-      "name": "Smiljan Mori",
-      "country": "SI",
-      "language": "sl",
-      "url": "https://smiljanmori.com/",
-      "categories": [
-        "liderstvo",
-        "edukacija"
-      ],
-      "description": "Internacionalni govornik i wealth creation strateg."
-    },
-    {
-      "id": "val202-poslovne",
-      "name": "Poslovne krivulje (Val202)",
-      "country": "SI",
-      "language": "sl",
-      "url": "https://www.youtube.com/@Val202podkasti",
-      "handle": "Val202podkasti",
-      "categories": [
-        "vijesti",
-        "poduzetnistvo"
-      ],
-      "description": "RTV SLO Val202 — prilike, novi tržišta, investicije, natječaji.",
-      "channelId": "UC8LtEin3o_XkagXgEOFbGGA",
-      "avatar": "https://yt3.googleusercontent.com/dp_yDv4lTzcBKFWHqam0EgohD6OqEJM4U7ko4962CN7cRhEGWHH9_02fwvxgcy0O7xW_wLhGEco=s240-c-k-c0x00ffffff-no-rj"
-    },
-    {
-      "id": "srce-bije",
-      "name": "Srce bije za posel",
-      "country": "SI",
-      "language": "sl",
-      "url": "https://www.youtube.com/@prvi_program",
-      "handle": "prvi_program",
-      "categories": [
-        "liderstvo"
-      ],
-      "description": "RTV SLO — vodenje, razvoj poduzeća, izazovi vrhunskih managera.",
-      "channelId": "UC7ww4LZFRC3Na4AodWebTAA",
-      "avatar": "https://yt3.googleusercontent.com/7dnxnKwDxfVp2CNsyi5_Tal3iaUKnOezDRUs96DfwHdcrvNKq3T5H7YWtG60wd2GYdKmT9D1=s240-c-k-c0x00ffffff-no-rj"
-    },
-    {
-      "id": "rastezanja",
-      "name": "RASTezanja (FrodX)",
-      "country": "SI",
-      "language": "sl",
-      "url": "https://www.youtube.com/@FrodXdoo",
-      "handle": "FrodXdoo",
-      "categories": [
-        "tech",
-        "marketing"
-      ],
-      "description": "Tehnologija, inovacije i customer experience u suvremenom poslovanju.",
-      "channelId": "UC_tBHxgVQfgLAzFaC6mXKig",
-      "avatar": "https://yt3.googleusercontent.com/cWQQT5d1yg4eDltSfRO4VksZv1nIaU4_yDKcY-QtJXeH-RXP0TcHxqgf-04Rd0KZ6Xl4VD_W9A=s240-c-k-c0x00ffffff-no-rj"
-    },
-    {
       "id": "kocovski",
       "name": "Александар Кочовски",
       "country": "MK",
@@ -390,22 +278,6 @@
       "avatar": "https://yt3.googleusercontent.com/XCYVRAPpWEIi-6WLK6eXyu8rGbqgEvaaqjo1mUjIuVuJPy0u1c65fYVlZ2Lg4yyg8jIK-OH-=s240-c-k-c0x00ffffff-no-rj"
     },
     {
-      "id": "casnik-finance",
-      "name": "Časnik Finance",
-      "country": "SI",
-      "language": "sl",
-      "url": "https://www.youtube.com/user/financeakademija",
-      "handle": "financeakademija",
-      "categories": [
-        "financije",
-        "vijesti",
-        "poduzetnistvo"
-      ],
-      "description": "Vodeća slovenska poslovna medijska kuća — ekonomija, financije, intervjui s direktorima.",
-      "channelId": "UC0vLk67kaN5F_S0VzvG1esQ",
-      "avatar": "https://yt3.googleusercontent.com/44W6zAQtdnrAXMikq6608FTLSPDUJvYzczKcmW9LR9X03wySG6P5SszEvk65l843V5Elh6Uv=s240-c-k-c0x00ffffff-no-rj"
-    },
-    {
       "id": "romano-bolkovic",
       "name": "Romano Bolković — 1 na 1",
       "country": "HR",
@@ -431,6 +303,51 @@
       "description": "Srpski startup inkubator i podcast za rane IT startupe — tehnologija, growth, financije.",
       "channelId": "UCxKOIQlO5Uw3hULP4AIzv2A",
       "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_ldcqIjk3u_wRvCk5k-D5jf9XUJ7ofgOrQepsay8Y-kubvPWVEhgpZuPf-DU0EM_N3Y9Q=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "bloomberg-adria",
+      "name": "Bloomberg Adria",
+      "country": "HR",
+      "language": "hr",
+      "url": "https://www.youtube.com/channel/UC0fv-E7Hogy-UbHZ8J8SRNA",
+      "channelId": "UC0fv-E7Hogy-UbHZ8J8SRNA",
+      "categories": [
+        "vijesti",
+        "financije",
+        "poduzetnistvo"
+      ],
+      "description": "Prva multiplatformska mreža za ekonomske i poslovne vijesti u Adriatic regiji — analize, intervjui, tržišta.",
+      "priority": 1,
+      "avatar": "https://yt3.googleusercontent.com/UC0rxaswOGuhRXfiVPYwhSZBVMJPayAnmuisnKWe8M4wTnMkaTXaKDuizGw7TLP-o6FMMqLmcw=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "mladi-poduzetnik-hr",
+      "name": "Mladi poduzetnik",
+      "country": "HR",
+      "language": "hr",
+      "url": "https://www.youtube.com/channel/UCuKMGQICbSumesEfgGFTiZg",
+      "channelId": "UCuKMGQICbSumesEfgGFTiZg",
+      "categories": [
+        "poduzetnistvo",
+        "edukacija"
+      ],
+      "description": "Kanal za mlade poduzetnike — savjeti za pokretanje obrta, prijava na natječaje, financiranje, marketing.",
+      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_m8cDc-SqcwlBBIIB-ytDj_QfT0hikdDUYva-EVpn8=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "privredna-komora-srbije",
+      "name": "Privredna komora Srbije",
+      "country": "RS",
+      "language": "sr",
+      "url": "https://www.youtube.com/channel/UCDLO-3KXK_7qmnmjuKy-l-g",
+      "channelId": "UCDLO-3KXK_7qmnmjuKy-l-g",
+      "categories": [
+        "poduzetnistvo",
+        "vijesti",
+        "edukacija"
+      ],
+      "description": "Privredna komora Srbije — događaji, edukacije, intervjui s direktorima, prilike za izvoz.",
+      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_nVVFVy7pB4dtXtq5haV9r3MnDei_EVFsp-34mBZJKm6w=s240-c-k-c0x00ffffff-no-rj"
     }
   ]
 }
