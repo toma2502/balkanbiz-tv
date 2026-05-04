@@ -21,6 +21,49 @@ export async function fetchChannelVideos(channelId: string): Promise<Video[]> {
   }
 }
 
+export async function fetchShortsIds(channelId: string): Promise<Set<string>> {
+  if (!channelId) return new Set();
+  try {
+    const res = await fetch(
+      `https://www.youtube.com/channel/${channelId}/shorts`,
+      {
+        next: { revalidate: 600 },
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+          "Accept-Language": "hr,en;q=0.7",
+        },
+      }
+    );
+    if (!res.ok) return new Set();
+    const html = await res.text();
+    const ids = new Set<string>();
+    const re = /\/shorts\/([A-Za-z0-9_-]{11})/g;
+    let m: RegExpExecArray | null;
+    while ((m = re.exec(html)) !== null) ids.add(m[1]);
+    return ids;
+  } catch {
+    return new Set();
+  }
+}
+
+export async function fetchChannelContent(channelId: string): Promise<{
+  regular: Video[];
+  shorts: Video[];
+}> {
+  const [allVideos, shortsIds] = await Promise.all([
+    fetchChannelVideos(channelId),
+    fetchShortsIds(channelId),
+  ]);
+  const regular: Video[] = [];
+  const shorts: Video[] = [];
+  for (const v of allVideos) {
+    if (shortsIds.has(v.id)) shorts.push(v);
+    else regular.push(v);
+  }
+  return { regular, shorts };
+}
+
 function parseFeed(xml: string): Video[] {
   const videos: Video[] = [];
   const entryRegex = /<entry>([\s\S]*?)<\/entry>/g;

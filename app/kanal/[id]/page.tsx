@@ -6,7 +6,7 @@ import {
   COUNTRY_NAMES,
   getChannelById,
 } from "@/lib/data";
-import { fetchChannelVideos } from "@/lib/youtube";
+import { fetchChannelContent } from "@/lib/youtube";
 import ChannelPlayer from "@/components/ChannelPlayer";
 
 export const revalidate = 600;
@@ -37,7 +37,10 @@ export default async function ChannelPage({
   const ch = getChannelById(id);
   if (!ch) notFound();
 
-  const videos = ch.channelId ? await fetchChannelVideos(ch.channelId) : [];
+  const content = ch.channelId
+    ? await fetchChannelContent(ch.channelId)
+    : { regular: [], shorts: [] };
+  const hasContent = content.regular.length > 0 || content.shorts.length > 0;
   const related = data.channels
     .filter(
       (c) =>
@@ -79,8 +82,12 @@ export default async function ChannelPage({
         </div>
       </div>
 
-      {videos.length > 0 ? (
-        <ChannelPlayer videos={videos} channelName={ch.name} />
+      {hasContent ? (
+        <ChannelPlayer
+          videos={content.regular}
+          shorts={content.shorts}
+          channelName={ch.name}
+        />
       ) : (
         <div className="aspect-video rounded-xl border border-dashed border-zinc-800 flex items-center justify-center text-zinc-500 text-center px-6">
           <div>
