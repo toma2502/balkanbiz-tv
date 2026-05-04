@@ -50,7 +50,7 @@ export default function FeedGrid({ items }: { items: FeedItem[] }) {
                     : "text-zinc-400 hover:text-amber-400"
                 }`}
               >
-                {t === "all" ? "Sve" : t === "regular" ? "Videi" : "Shortsi"}
+                {t === "all" ? "Sve" : t === "regular" ? "Videozapisi" : "Shortsi"}
               </button>
             ))}
           </div>
@@ -84,7 +84,7 @@ export default function FeedGrid({ items }: { items: FeedItem[] }) {
           </select>
 
           <span className="text-xs text-zinc-500 ml-auto">
-            {filtered.length} {filtered.length === 1 ? "video" : "videozapisa"}
+            {filtered.length} {filtered.length === 1 ? "videozapis" : "videozapisa"}
           </span>
         </div>
       </div>

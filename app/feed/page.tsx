@@ -2,9 +2,9 @@ import FeedGrid from "@/components/FeedGrid";
 import { getLatestFeed } from "@/lib/feed";
 
 export const metadata = {
-  title: "Feed — Najnoviji videi sa svih kanala — BalkanBiz TV",
+  title: "Feed — Najnoviji videozapisi sa svih kanala — BalkanBiz TV",
   description:
-    "Sve najnovije sa svih balkanskih poslovnih YouTube kanala na jednom mjestu. Filtriraj po zemlji, temi, ili tipu (Shorts/regularni videi).",
+    "Sve najnovije sa svih balkanskih poslovnih YouTube kanala na jednom mjestu. Filtriraj po zemlji, temi, ili tipu (Shorts ili regularni videozapisi).",
 };
 
 export const revalidate = 600;

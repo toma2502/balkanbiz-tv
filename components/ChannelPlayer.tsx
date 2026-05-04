@@ -81,7 +81,7 @@ export default function ChannelPlayer({
       {videos.length > 0 && (
         <VideoSection
           title="Najnoviji videozapisi"
-          subtitle={`${videos.length} ${videos.length === 1 ? "video" : "videozapisa"}`}
+          subtitle={`${videos.length} ${videos.length === 1 ? "videozapis" : "videozapisa"}`}
           videos={videos}
           selected={selected}
           onPick={pickVideo}
