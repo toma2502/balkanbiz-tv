@@ -200,8 +200,8 @@
     {
       "id": "podcast-inkubator",
       "name": "Podcast Inkubator",
-      "country": "RS",
-      "language": "sr",
+      "country": "HR",
+      "language": "hr",
       "url": "https://www.youtube.com/@PodcastInkubator",
       "handle": "PodcastInkubator",
       "categories": [
@@ -359,6 +359,93 @@
       ],
       "description": "Преобликување го бизнисот да ти служи — makedonski biznis mindset.",
       "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_nL6am7486ms_szaSjyIthFrEJZ7WCpnMi9lx6wPpjOqL0=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "telegram-hr",
+      "name": "Telegram.hr",
+      "country": "HR",
+      "language": "hr",
+      "url": "https://www.youtube.com/@TelegramhrVideo",
+      "handle": "TelegramhrVideo",
+      "categories": [
+        "vijesti",
+        "poduzetnistvo"
+      ],
+      "description": "Telegram.hr — društvene, poslovne, tech i karijere teme. Intervjui sa ženama na vodećim pozicijama, analiza poslovnih trendova.",
+      "channelId": "UCZ8jRkBWJjyIhXcQa8o8LSQ",
+      "avatar": "https://yt3.googleusercontent.com/DXpW_XupMfUOuvI8RWq1tiGHicSkHrhYNasG7cfXkFWE2rMC5bdNl88AhSP-wwWJOuJaXvdQ=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "akta-ba",
+      "name": "Akta.ba",
+      "country": "BA",
+      "language": "bs",
+      "url": "https://www.youtube.com/channel/UCl3scss6MWIDhrMCy_-A28g",
+      "channelId": "UCl3scss6MWIDhrMCy_-A28g",
+      "categories": [
+        "vijesti",
+        "poduzetnistvo",
+        "financije"
+      ],
+      "description": "Vodeći BiH poslovni portal — ekonomske analize, izvještaji s burze, najave investicija i tendera.",
+      "avatar": "https://yt3.googleusercontent.com/2FPhm5uLSHLQf0sx-Z-A4FFwh23LVu1o6Ovvead3wTZd4oFM96ENffmzEScQL7IVvw0QPhm88-w=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "klix-ba",
+      "name": "Klix.ba",
+      "country": "BA",
+      "language": "bs",
+      "url": "https://www.youtube.com/channel/UCwXLgzlVei1j94sRfg3j5fA",
+      "channelId": "UCwXLgzlVei1j94sRfg3j5fA",
+      "categories": [
+        "vijesti",
+        "poduzetnistvo"
+      ],
+      "description": "Najposjećeniji BiH news portal — biznis, investicije, valute, burze, projekti i priče uspjeha.",
+      "avatar": "https://yt3.googleusercontent.com/XCYVRAPpWEIi-6WLK6eXyu8rGbqgEvaaqjo1mUjIuVuJPy0u1c65fYVlZ2Lg4yyg8jIK-OH-=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "casnik-finance",
+      "name": "Časnik Finance",
+      "country": "SI",
+      "language": "sl",
+      "url": "https://www.youtube.com/user/financeakademija",
+      "handle": "financeakademija",
+      "categories": [
+        "financije",
+        "vijesti",
+        "poduzetnistvo"
+      ],
+      "description": "Vodeća slovenska poslovna medijska kuća — ekonomija, financije, intervjui s direktorima.",
+      "channelId": "UC0vLk67kaN5F_S0VzvG1esQ",
+      "avatar": "https://yt3.googleusercontent.com/44W6zAQtdnrAXMikq6608FTLSPDUJvYzczKcmW9LR9X03wySG6P5SszEvk65l843V5Elh6Uv=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "romano-bolkovic",
+      "name": "Romano Bolković — 1 na 1",
+      "country": "HR",
+      "language": "hr",
+      "url": "https://www.youtube.com/playlist?list=PLuEWODEWd3kOBpCz0FqspWIbF3t4hdE8b",
+      "categories": [
+        "liderstvo",
+        "edukacija"
+      ],
+      "description": "Dubinski intervjui s znanstvenicima, poduzetnicima, diplomatima i intelektualcima koji oblikuju europsku i svjetsku politiku."
+    },
+    {
+      "id": "tech-talk-rs",
+      "name": "Tech Talk Hub",
+      "country": "RS",
+      "language": "sr",
+      "url": "https://www.youtube.com/@TechTalkHub",
+      "handle": "TechTalkHub",
+      "categories": [
+        "tech",
+        "poduzetnistvo"
+      ],
+      "description": "Srpski startup inkubator i podcast za rane IT startupe — tehnologija, growth, financije.",
+      "channelId": "UCxKOIQlO5Uw3hULP4AIzv2A",
+      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_ldcqIjk3u_wRvCk5k-D5jf9XUJ7ofgOrQepsay8Y-kubvPWVEhgpZuPf-DU0EM_N3Y9Q=s240-c-k-c0x00ffffff-no-rj"
     }
   ]
 }
