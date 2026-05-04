@@ -10,7 +10,7 @@ export const metadata = {
 export const revalidate = 600;
 
 export default async function FeedPage() {
-  const items = await getLatestFeed(120);
+  const items = await getLatestFeed(300);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-14">

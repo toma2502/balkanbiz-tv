@@ -1,14 +1,28 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import type { FeedItem } from "@/lib/feed";
 import { timeAgo } from "@/lib/youtube";
 import { COUNTRY_FLAGS, COUNTRY_NAMES, data } from "@/lib/data";
+import {
+  readHistory,
+  trackWatch,
+  recommendForUser,
+  clearHistory,
+  type WatchEntry,
+} from "@/lib/history";
 
-type FilterType = "all" | "regular" | "short";
+type FilterTab = "all" | "regular" | "short" | "for-you";
 
-// Score-based related videos: same channel > shared categories > same country
+const TAB_LABELS: Record<FilterTab, string> = {
+  all: "Sve",
+  regular: "Videozapisi",
+  short: "Shortsi",
+  "for-you": "Preporučeno za tebe",
+};
+
+// Score-based related videos for the modal panel
 function computeRelated(
   active: FeedItem,
   items: FeedItem[],
@@ -25,10 +39,9 @@ function computeRelated(
       score += sharedCats * 12;
       if (v.country === active.country) score += 5;
       if (v.isShort === active.isShort) score += 2;
-      // Slight recency boost
       const daysOld =
         (Date.now() - +new Date(v.published)) / (1000 * 60 * 60 * 24);
-      score -= Math.min(daysOld / 30, 3); // light recency penalty
+      score -= Math.min(daysOld / 30, 3);
       return { v, score };
     })
     .filter((x) => x.score > 0)
@@ -38,20 +51,35 @@ function computeRelated(
 }
 
 export default function FeedGrid({ items }: { items: FeedItem[] }) {
-  const [filterType, setFilterType] = useState<FilterType>("all");
+  const [filterTab, setFilterTab] = useState<FilterTab>("all");
   const [filterCountry, setFilterCountry] = useState<string>("all");
   const [filterCategory, setFilterCategory] = useState<string>("all");
   const [activeVideo, setActiveVideo] = useState<FeedItem | null>(null);
+  const [history, setHistory] = useState<WatchEntry[]>([]);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    setHistory(readHistory());
+  }, []);
 
   const countries = useMemo(
     () => [...new Set(items.map((i) => i.country))].sort(),
     [items]
   );
 
+  const recommended = useMemo(
+    () => (history.length > 0 ? recommendForUser(items, history, 80) : []),
+    [items, history]
+  );
+
   const filtered = useMemo(() => {
-    return items.filter((i) => {
-      if (filterType === "regular" && i.isShort) return false;
-      if (filterType === "short" && !i.isShort) return false;
+    let base: FeedItem[] = items;
+    if (filterTab === "regular") base = items.filter((i) => !i.isShort);
+    else if (filterTab === "short") base = items.filter((i) => i.isShort);
+    else if (filterTab === "for-you") base = recommended;
+
+    return base.filter((i) => {
       if (filterCountry !== "all" && i.country !== filterCountry) return false;
       if (
         filterCategory !== "all" &&
@@ -60,28 +88,58 @@ export default function FeedGrid({ items }: { items: FeedItem[] }) {
         return false;
       return true;
     });
-  }, [items, filterType, filterCountry, filterCategory]);
+  }, [items, filterTab, filterCountry, filterCategory, recommended]);
+
+  function pickVideo(v: FeedItem) {
+    setActiveVideo(v);
+    const next = trackWatch(v);
+    setHistory(next);
+  }
+
+  function clearAndReset() {
+    clearHistory();
+    setHistory([]);
+    if (filterTab === "for-you") setFilterTab("all");
+  }
 
   return (
     <div>
-      {/* Filter bar */}
+      {/* Tab + filter bar */}
       <div className="sticky top-[56px] sm:top-[64px] z-20 -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 sm:py-4 bg-zinc-950/85 backdrop-blur-md border-b border-zinc-900/60 mb-6 sm:mb-8">
         <div className="flex flex-wrap items-center gap-2">
-          {/* Type filter */}
-          <div className="flex gap-1 p-1 rounded-full border border-zinc-800 bg-zinc-900/40">
-            {(["all", "regular", "short"] as FilterType[]).map((t) => (
-              <button
-                key={t}
-                onClick={() => setFilterType(t)}
-                className={`text-xs px-3 py-1.5 rounded-full transition-colors ${
-                  filterType === t
-                    ? "bg-amber-400 text-zinc-950 font-semibold"
-                    : "text-zinc-400 hover:text-amber-400"
-                }`}
-              >
-                {t === "all" ? "Sve" : t === "regular" ? "Videozapisi" : "Shortsi"}
-              </button>
-            ))}
+          {/* Tabs */}
+          <div className="flex gap-1 p-1 rounded-full border border-zinc-800 bg-zinc-900/40 overflow-x-auto max-w-full">
+            {(["all", "regular", "short", "for-you"] as FilterTab[]).map(
+              (t) => {
+                const disabled = t === "for-you" && history.length === 0;
+                return (
+                  <button
+                    key={t}
+                    onClick={() => !disabled && setFilterTab(t)}
+                    disabled={disabled}
+                    className={`text-xs px-3 py-1.5 rounded-full transition-colors whitespace-nowrap ${
+                      filterTab === t
+                        ? "bg-amber-400 text-zinc-950 font-semibold"
+                        : disabled
+                        ? "text-zinc-600 cursor-not-allowed"
+                        : "text-zinc-400 hover:text-amber-400"
+                    }`}
+                    title={
+                      disabled
+                        ? "Pogledaj barem jedan video pa će ti algoritam preporučiti slične"
+                        : undefined
+                    }
+                  >
+                    {TAB_LABELS[t]}
+                    {t === "for-you" && history.length > 0 && (
+                      <span className="ml-1 text-[10px] opacity-70">
+                        ({history.length})
+                      </span>
+                    )}
+                  </button>
+                );
+              }
+            )}
           </div>
 
           {/* Country filter */}
@@ -113,12 +171,31 @@ export default function FeedGrid({ items }: { items: FeedItem[] }) {
           </select>
 
           <span className="text-xs text-zinc-500 ml-auto">
-            {filtered.length} {filtered.length === 1 ? "videozapis" : "videozapisa"}
+            {filtered.length}{" "}
+            {filtered.length === 1 ? "videozapis" : "videozapisa"}
           </span>
         </div>
+
+        {/* For-you info bar */}
+        {filterTab === "for-you" && mounted && (
+          <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] text-zinc-400">
+            <span className="px-2 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-400">
+              ⚡ Lokalno · {history.length} pregled{history.length === 1 ? "" : "a"}
+            </span>
+            <span className="text-zinc-500">
+              Algoritam radi isključivo u tvom pregledniku — povijest se nikad ne šalje na server.
+            </span>
+            <button
+              onClick={clearAndReset}
+              className="ml-auto text-zinc-500 hover:text-amber-400 underline-offset-2 hover:underline"
+            >
+              Obriši povijest
+            </button>
+          </div>
+        )}
       </div>
 
-      {/* Inline player modal */}
+      {/* Modal */}
       {activeVideo &&
         (() => {
           const related = computeRelated(activeVideo, items, 12);
@@ -174,7 +251,6 @@ export default function FeedGrid({ items }: { items: FeedItem[] }) {
                     </button>
                   </div>
 
-                  {/* Related */}
                   {related.length > 0 && (
                     <div className="border-t border-zinc-900 pt-6">
                       <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 mb-5">
@@ -185,7 +261,7 @@ export default function FeedGrid({ items }: { items: FeedItem[] }) {
                           <button
                             key={r.id + r.channelSlug}
                             onClick={() => {
-                              setActiveVideo(r);
+                              pickVideo(r);
                               window.scrollTo({ top: 0, behavior: "smooth" });
                             }}
                             className="text-left group rounded-xl overflow-hidden border border-zinc-800/80 bg-zinc-900/40 hover:border-amber-400/50 transition-all"
@@ -248,9 +324,9 @@ export default function FeedGrid({ items }: { items: FeedItem[] }) {
         {filtered.map((v, idx) => (
           <button
             key={v.id + v.channelSlug}
-            onClick={() => setActiveVideo(v)}
+            onClick={() => pickVideo(v)}
             className="group text-left rounded-xl overflow-hidden border border-zinc-800/80 bg-zinc-900/30 hover:border-amber-400/50 hover:bg-zinc-900/60 transition-all card-lift fade-up"
-            style={{ animationDelay: `${Math.min(idx * 25, 600)}ms` }}
+            style={{ animationDelay: `${Math.min(idx * 20, 600)}ms` }}
           >
             <div className="relative aspect-video bg-zinc-900 overflow-hidden">
               <img
@@ -307,9 +383,20 @@ export default function FeedGrid({ items }: { items: FeedItem[] }) {
         ))}
       </div>
 
-      {filtered.length === 0 && (
+      {filtered.length === 0 && filterTab !== "for-you" && (
         <div className="text-center py-20 text-zinc-500">
-          Nema videa za odabrane filtre. Pokušaj promijeniti filter.
+          Nema videozapisa za odabrane filtre. Pokušaj promijeniti filter.
+        </div>
+      )}
+
+      {filtered.length === 0 && filterTab === "for-you" && (
+        <div className="text-center py-20 text-zinc-500 max-w-md mx-auto">
+          <p className="mb-3">
+            🔮 Algoritam preporuke radi na temelju tvoje povijesti gledanja.
+          </p>
+          <p className="text-sm">
+            Pogledaj nekoliko videozapisa pa će se ovdje pojaviti relevantne preporuke. Sve ostaje u tvom pregledniku — ništa se ne šalje na server.
+          </p>
         </div>
       )}
     </div>
