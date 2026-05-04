@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import MetaPixel from "@/components/MetaPixel";
 
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
@@ -84,6 +85,7 @@ export default function RootLayout({
           </nav>
         </header>
         <main className="min-h-[80vh]">{children}</main>
+        <MetaPixel />
         <footer className="border-t border-zinc-900/80 mt-32">
           <div className="max-w-7xl mx-auto px-6 py-16">
             <div className="flex flex-col sm:flex-row items-start justify-between gap-8">
@@ -97,7 +99,7 @@ export default function RootLayout({
                   </span>
                 </div>
                 <p className="text-sm text-zinc-500 max-w-md leading-relaxed">
-                  Open-source kuriran katalog balkanskih poslovnih YouTube kanala. Bez algoritma, bez praćenja, bez ad-mreža.
+                  Open-source kuriran katalog balkanskih poslovnih YouTube kanala. Bez algoritma, bez ad-mreža.
                 </p>
               </div>
               <div className="flex flex-col sm:items-end gap-2 text-sm">

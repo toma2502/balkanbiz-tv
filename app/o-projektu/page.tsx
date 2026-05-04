@@ -22,9 +22,20 @@ export default function AboutPage() {
       <ul className="text-zinc-400 leading-relaxed space-y-2 list-none pl-0">
         <li>· Ne hostamo videe — sve dolazi izravno s YouTubea kroz službeni embed</li>
         <li>· Ne ubacujemo Google AdSense ili slične ad-mreže oko videa</li>
-        <li>· Ne pratimo korisnike trackerima trećih strana</li>
         <li>· Ne tvrdimo da smo povezani s YouTubeom ili Googleom</li>
         <li>· Ne kradimo ničije autorske prihode — svaki view ide kroz YouTube i autor zaslužuje monetizaciju</li>
+      </ul>
+
+      <h2 className="text-2xl font-bold mt-12 mb-4">Što pratimo i zašto</h2>
+      <p className="text-zinc-400 leading-relaxed mb-3">
+        Iskreno: koristimo <strong className="text-zinc-300">Meta Pixel</strong> kako bismo razumjeli koje kanale ljudi najviše gledaju i kako bismo mogli povremeno informirati zainteresirane korisnike o novim događanjima i suradnjama na Meta platformama (Facebook, Instagram).
+      </p>
+      <ul className="text-zinc-400 leading-relaxed space-y-2 list-none pl-0">
+        <li>· Pratimo agregirane podatke o posjetama i interakcijama (koje kanale otvarate, koliko se zadržavate)</li>
+        <li>· Koristimo te podatke za remarketing oglasa relevantnih za poslovnu publiku</li>
+        <li>· Tvoj pristanak možeš povući bilo kada kroz <a href="#cookie-settings" className="text-amber-400 hover:underline">postavke kolačića</a> u dnu stranice</li>
+        <li>· Ne dijelimo individualne podatke s trećim stranama izvan Meta platformi</li>
+        <li>· Ako odbiješ kolačiće, stranica radi normalno — samo bez Meta Pixela</li>
       </ul>
 
       <h2 className="text-2xl font-bold mt-12 mb-4">Što radimo i što planiramo</h2>
@@ -65,6 +76,14 @@ export default function AboutPage() {
           Kontakt za suradnju
         </a>
       </div>
+
+      <h2 className="text-2xl font-bold mt-12 mb-4">Privatnost i GDPR</h2>
+      <p className="text-zinc-500 text-sm leading-relaxed mb-3">
+        Pri prvoj posjeti tražit ćemo tvoj pristanak za korištenje Meta Pixela. Bez pristanka, Pixel se ne pokreće i stranica radi bez praćenja. Tvoj izbor pamtimo lokalno u tvojem pregledniku (localStorage), ne dijelimo ga s trećim stranama. Pristanak možeš promijeniti u svakom trenutku.
+      </p>
+      <p className="text-zinc-500 text-sm leading-relaxed">
+        YouTube embed može postavljati vlastite kolačiće (YouTube/Google) — to je dio njihovih usluga i ne kontroliramo. Za potpunu privatnost, koristi „Privacy Enhanced Mode" YouTube preglednik ekstenzije.
+      </p>
 
       <h2 className="text-2xl font-bold mt-12 mb-4">Pravna napomena</h2>
       <p className="text-zinc-500 text-sm leading-relaxed">
