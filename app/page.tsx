@@ -45,19 +45,25 @@ export default function Home() {
             style={{ animationDelay: "200ms" }}
           >
             <Link
-              href="/kanali"
+              href="/feed"
               className="group inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-amber-400 text-zinc-950 font-semibold hover:bg-amber-300 transition-colors text-sm w-full sm:w-auto"
             >
-              Pregledaj kanale
+              Otvori feed
               <span className="transition-transform group-hover:translate-x-1">→</span>
+            </Link>
+            <Link
+              href="/kanali"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full border border-zinc-800 hover:border-zinc-600 text-zinc-300 font-medium transition-colors text-sm w-full sm:w-auto"
+            >
+              Pregledaj kanale
             </Link>
             <a
               href="https://github.com/toma2502/balkanbiz-tv"
               target="_blank"
               rel="noopener"
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full border border-zinc-800 hover:border-zinc-600 text-zinc-300 font-medium transition-colors text-sm w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full text-zinc-400 hover:text-amber-400 transition-colors text-sm w-full sm:w-auto"
             >
-              Doprinesi na GitHubu
+              Doprinesi na GitHubu ↗
             </a>
           </div>
         </div>

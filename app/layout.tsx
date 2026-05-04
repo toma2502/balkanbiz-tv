@@ -70,6 +70,12 @@ export default function RootLayout({
             </Link>
             <div className="flex items-center gap-4 sm:gap-6 text-sm text-zinc-400">
               <Link
+                href="/feed"
+                className="hover:text-amber-400 transition-colors font-medium"
+              >
+                Feed
+              </Link>
+              <Link
                 href="/kanali"
                 className="hover:text-amber-400 transition-colors"
               >
