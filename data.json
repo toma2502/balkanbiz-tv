@@ -1,0 +1,38 @@
+{
+  "version": "0.1.0",
+  "updated": "2026-05-04",
+  "categories": [
+    {"id": "poduzetnistvo", "label": "Poduzetništvo", "icon": "🚀"},
+    {"id": "marketing", "label": "Marketing & Prodaja", "icon": "📣"},
+    {"id": "financije", "label": "Financije & Investiranje", "icon": "💰"},
+    {"id": "tech", "label": "Tehnologija & Startupi", "icon": "⚡"},
+    {"id": "liderstvo", "label": "Liderstvo & Razvoj", "icon": "🎯"},
+    {"id": "edukacija", "label": "Poslovna edukacija", "icon": "📚"},
+    {"id": "vijesti", "label": "Poslovne vijesti", "icon": "📰"}
+  ],
+  "channels": [
+    {"id": "lider", "name": "Lider", "country": "HR", "language": "hr", "url": "https://www.youtube.com/channel/UCboxxQjTe6vkiny3mkIo_BQ", "channelId": "UCboxxQjTe6vkiny3mkIo_BQ", "categories": ["vijesti", "poduzetnistvo"], "description": "Poslovni magazin Lider — videointervjui s vrhunskim direktorima i analize hrvatskog poslovnog svijeta."},
+    {"id": "netokracija", "name": "Netokracija", "country": "HR", "language": "hr", "url": "https://www.youtube.com/@Netokracija", "handle": "Netokracija", "categories": ["tech", "poduzetnistvo"], "description": "Vodeći regionalni magazin za one koji žive od interneta — startupi, digitalni biznis, marketing."},
+    {"id": "radimposvom", "name": "#radimposvom", "country": "HR", "language": "hr", "url": "https://www.youtube.com/c/teazavacki", "handle": "teazavacki", "categories": ["poduzetnistvo", "edukacija"], "description": "Tea Žavacki — primjenjive strategije za freelancere i poduzetnike koji rade po svom."},
+    {"id": "ramiro", "name": "Ramiro - Psihologija uspjeha", "country": "HR", "language": "hr", "url": "https://www.ramiro.hr/", "categories": ["liderstvo", "edukacija"], "description": "Razgovori s uspješnim vlasnicima tvrtki o tajnama postizanja velikih rezultata."},
+    {"id": "crypto-hrvatska", "name": "Crypto Hrvatska", "country": "HR", "language": "hr", "url": "https://www.youtube.com/channel/UCa5qsLyrzhs5zuGGg8dgyBg", "channelId": "UCa5qsLyrzhs5zuGGg8dgyBg", "categories": ["financije"], "description": "Kriptovalute, Bitcoin, blockchain — analize, vijesti i trendovi za hrvatsko tržište."},
+    {"id": "svijet-kripta", "name": "Svijet Kripta", "country": "HR", "language": "hr", "url": "https://www.youtube.com/channel/UCeWfsQZImhusHbXbN4byaXw", "channelId": "UCeWfsQZImhusHbXbN4byaXw", "categories": ["financije"], "description": "Svijet kriptovaluta, NFT-ova i blockchain projekata — recenzije i analize."},
+    {"id": "biznis-price", "name": "Biznis Priče", "country": "RS", "language": "sr", "url": "https://www.youtube.com/c/BiznisPrice", "handle": "BiznisPrice", "categories": ["poduzetnistvo", "liderstvo"], "description": "Vladimir Stanković vodi #1 regionalni biznis podcast s 200+ epizoda i pričama uspješnih poduzetnika.", "priority": 1},
+    {"id": "pojacalo", "name": "Pojačalo", "country": "RS", "language": "sr", "url": "https://www.youtube.com/@pojacalo", "handle": "pojacalo", "categories": ["poduzetnistvo", "tech"], "description": "Ivan Minić — serijski internet poduzetnik vodi vodeći podcast o poduzetništvu i tehnologiji.", "priority": 1},
+    {"id": "imarketing", "name": "iMarketing Agencija", "country": "RS", "language": "sr", "url": "https://www.youtube.com/@imarketing", "handle": "imarketing", "categories": ["marketing"], "description": "20+ godina iskustva u digitalnom marketingu — branding, online business, savjeti."},
+    {"id": "marketing-srbija", "name": "MARKETING SRBIJA", "country": "RS", "language": "sr", "url": "https://www.youtube.com/c/marketingsrbija", "handle": "marketingsrbija", "categories": ["marketing", "edukacija"], "description": "Tutoriali i savjeti za online vještine, online prodaju i pokretanje biznisa."},
+    {"id": "licne-finansije", "name": "Lične Finansije", "country": "RS", "language": "sr", "url": "https://www.youtube.com/c/LicneFinansije", "handle": "LicneFinansije", "categories": ["financije", "edukacija"], "description": "Osobne financije, krediti, investiranje — praktični savjeti za balkansko tržište."},
+    {"id": "podcast-inkubator", "name": "Podcast Inkubator", "country": "RS", "language": "sr", "url": "https://www.youtube.com/@PodcastInkubator", "handle": "PodcastInkubator", "categories": ["poduzetnistvo", "vijesti"], "description": "Jedan od najpoznatijih podcasta u regiji — gosti iz biznisa, sporta, medija i javnog života."},
+    {"id": "balkan-business", "name": "Balkan Business Podcast", "country": "RS", "language": "sr", "url": "https://podcasts.apple.com/mz/podcast/balkan-business-podcast-biznis-na-balkanu", "categories": ["poduzetnistvo"], "description": "Praktične smjernice za balkanske poduzetnike — povećanje prihoda i rezultata."},
+    {"id": "marketing-srcem", "name": "Marketing sa srcem & brend sa dušom", "country": "BA", "language": "bs", "url": "https://podcasts.apple.com/us/podcast/marketing-sa-srcem-brend-sa-du%C5%A1om", "categories": ["marketing"], "description": "Bosanski podcast o marketingu, produktivnosti, prodaji i online brandingu."},
+    {"id": "sbc", "name": "SBC - Klub slovenskih podjetnikov", "country": "SI", "language": "sl", "url": "https://www.youtube.com/@sbc-klubslovenskihpodjetnikov", "handle": "sbc-klubslovenskihpodjetnikov", "categories": ["poduzetnistvo", "liderstvo"], "description": "450+ slovenskih poduzetnika dijeli iskustva, brojeve i odluke iz prakse.", "priority": 1},
+    {"id": "zavod-mladi", "name": "Zavod mladi podjetnik", "country": "SI", "language": "sl", "url": "https://www.youtube.com/channel/UCsN65I5LElgxGDYAazr1ykA", "channelId": "UCsN65I5LElgxGDYAazr1ykA", "categories": ["poduzetnistvo", "edukacija"], "description": "Slovenska neprofitna organizacija za podršku mladim poduzetnicima."},
+    {"id": "zan-nekrep", "name": "Žan Nekrep", "country": "SI", "language": "sl", "url": "https://zannekrep.net/youtube/", "categories": ["poduzetnistvo", "marketing"], "description": "Slovenski poduzetnik (Kužek & Mucek) — biznis intervjui i osobni razvoj."},
+    {"id": "filip-pesek", "name": "Filip Pesek", "country": "SI", "language": "sl", "url": "https://filippesek.com/", "categories": ["poduzetnistvo", "edukacija"], "description": "Mentor2Millions workshops — izlazak iz stagnacije za poduzetnike."},
+    {"id": "smiljan-mori", "name": "Smiljan Mori", "country": "SI", "language": "sl", "url": "https://smiljanmori.com/", "categories": ["liderstvo", "edukacija"], "description": "Internacionalni govornik i wealth creation strateg."},
+    {"id": "val202-poslovne", "name": "Poslovne krivulje (Val202)", "country": "SI", "language": "sl", "url": "https://www.youtube.com/@Val202podkasti", "handle": "Val202podkasti", "categories": ["vijesti", "poduzetnistvo"], "description": "RTV SLO Val202 — prilike, novi tržišta, investicije, natječaji."},
+    {"id": "srce-bije", "name": "Srce bije za posel", "country": "SI", "language": "sl", "url": "https://www.youtube.com/@prvi_program", "handle": "prvi_program", "categories": ["liderstvo"], "description": "RTV SLO — vodenje, razvoj poduzeća, izazovi vrhunskih managera."},
+    {"id": "rastezanja", "name": "RASTezanja (FrodX)", "country": "SI", "language": "sl", "url": "https://www.youtube.com/@FrodXdoo", "handle": "FrodXdoo", "categories": ["tech", "marketing"], "description": "Tehnologija, inovacije i customer experience u suvremenom poslovanju."},
+    {"id": "kocovski", "name": "Александар Кочовски", "country": "MK", "language": "mk", "url": "https://www.youtube.com/channel/UCsf69PgqLqgz_9RW-BWzLdA", "channelId": "UCsf69PgqLqgz_9RW-BWzLdA", "categories": ["poduzetnistvo", "liderstvo"], "description": "Преобликување го бизнисот да ти служи — makedonski biznis mindset."}
+  ]
+}

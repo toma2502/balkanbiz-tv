@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BalkanBiz TV
 
-## Getting Started
+Open-source kuriran katalog poslovnih YouTube kanala iz balkanskih zemalja — Hrvatska, Srbija, BiH, Slovenija, Makedonija, Crna Gora.
 
-First, run the development server:
+Bez algoritma, bez praćenja, bez oglasa. Samo poslovni sadržaj na našem jeziku.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Live
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+https://balkanbiz-tv.vercel.app (uskoro)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js 16 (App Router) + React 19
+- Tailwind CSS v4
+- Static export — sve renderira u build time
+- Hostan na Vercelu
 
-## Learn More
+## Doprinos
 
-To learn more about Next.js, take a look at the following resources:
+Predložite novi kanal kroz [GitHub issues](https://github.com/toma2502/balkanbiz-tv/issues/new) ili otvorite pull request s izmjenom `data.json`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Kriteriji za uvrštavanje:
+- Kanal je iz neke od 6 ciljanih zemalja
+- Sadržaj je primarno poslovne, marketinške, financijske, tech ili leadership prirode
+- Kanal je aktivan (objava u zadnjih 6 mjeseci)
+- Sadržaj je na hrvatskom, srpskom, bosanskom, slovenskom, makedonskom ili crnogorskom jeziku
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Licenca
 
-## Deploy on Vercel
+MIT — vidi LICENSE.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Pravna napomena
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Nismo povezani s YouTubeom ili Googleom. Sav video sadržaj pripada svojim autorima i hosta se na YouTubeu. Ova stranica koristi službeni YouTube embed mehanizam i poštuje YouTube TOS.
