@@ -5,8 +5,11 @@ import {
   COUNTRY_FLAGS,
   COUNTRY_NAMES,
   getChannelById,
-  getEmbedUrl,
 } from "@/lib/data";
+import { fetchChannelVideos } from "@/lib/youtube";
+import ChannelPlayer from "@/components/ChannelPlayer";
+
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
   return data.channels.map((c) => ({ id: c.id }));
@@ -34,7 +37,7 @@ export default async function ChannelPage({
   const ch = getChannelById(id);
   if (!ch) notFound();
 
-  const embedUrl = getEmbedUrl(ch);
+  const videos = ch.channelId ? await fetchChannelVideos(ch.channelId) : [];
   const related = data.channels
     .filter(
       (c) =>
@@ -76,21 +79,12 @@ export default async function ChannelPage({
         </div>
       </div>
 
-      {/* Embed */}
-      {embedUrl ? (
-        <div className="aspect-video rounded-xl overflow-hidden border border-zinc-800 bg-black mb-6">
-          <iframe
-            src={embedUrl}
-            title={ch.name}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full"
-          />
-        </div>
+      {videos.length > 0 ? (
+        <ChannelPlayer videos={videos} channelName={ch.name} />
       ) : (
-        <div className="aspect-video rounded-xl border border-dashed border-zinc-800 flex items-center justify-center text-zinc-500 text-center px-6 mb-6">
+        <div className="aspect-video rounded-xl border border-dashed border-zinc-800 flex items-center justify-center text-zinc-500 text-center px-6">
           <div>
-            <p>Embed pregled nije dostupan za ovaj kanal.</p>
+            <p>Nije moguće dohvatiti videe za ovaj kanal.</p>
             <a
               href={ch.url}
               target="_blank"
@@ -103,14 +97,14 @@ export default async function ChannelPage({
         </div>
       )}
 
-      <div className="flex flex-wrap gap-3 mb-12">
+      <div className="flex flex-wrap gap-3 mt-8 mb-12">
         <a
-          href={ch.url}
+          href={ch.url || `https://www.youtube.com/channel/${ch.channelId ?? ""}`}
           target="_blank"
           rel="noopener"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-amber-400 text-zinc-950 font-semibold hover:bg-amber-300 transition-colors"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-zinc-800 hover:border-zinc-700 text-zinc-300 transition-colors"
         >
-          Otvori na YouTubeu ↗
+          Pretplati se na YouTubeu ↗
         </a>
         <a
           href={`https://github.com/toma2502/balkanbiz-tv/issues/new?title=Update:%20${encodeURIComponent(
