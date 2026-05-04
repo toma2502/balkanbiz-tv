@@ -14,7 +14,23 @@ export default function Home() {
   return (
     <div className="max-w-7xl mx-auto px-6">
       {/* Hero */}
-      <section className="relative py-32 sm:py-44">
+      <section className="relative py-32 sm:py-44 overflow-hidden">
+        {/* Video background */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/hero-bg-poster.jpg"
+          className="absolute inset-0 w-full h-full object-cover -z-10 opacity-80"
+          aria-hidden
+        >
+          <source src="/hero-bg.mp4" type="video/mp4" />
+        </video>
+        <div
+          className="absolute inset-0 -z-10 bg-gradient-to-b from-zinc-950/40 via-zinc-950/60 to-zinc-950"
+          aria-hidden
+        />
         <div className="ambient-glow" aria-hidden />
         <div className="relative max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-zinc-800 bg-zinc-900/40 backdrop-blur text-[11px] uppercase tracking-[0.15em] text-zinc-400 mb-10 fade-up">
@@ -131,7 +147,7 @@ export default function Home() {
                 style={{ animationDelay: `${i * 70}ms` }}
               >
                 <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.15em] text-amber-400/80 mb-4 font-semibold">
-                  <span>★ Priority</span>
+                  <span>★ Istaknuto</span>
                   <span className="text-zinc-700">·</span>
                   <span>
                     {COUNTRY_FLAGS[ch.country]} {COUNTRY_NAMES[ch.country]}

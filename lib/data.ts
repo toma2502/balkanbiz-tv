@@ -14,6 +14,7 @@ export type Channel = {
   url: string;
   channelId?: string;
   handle?: string;
+  avatar?: string;
   categories: string[];
   description: string;
   priority?: number;

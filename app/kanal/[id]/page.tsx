@@ -57,7 +57,7 @@ export default async function ChannelPage({
           <span>
             {COUNTRY_FLAGS[ch.country]} {COUNTRY_NAMES[ch.country]}
           </span>
-          {ch.priority === 1 && <span className="text-amber-400">★ Priority</span>}
+          {ch.priority === 1 && <span className="text-amber-400">★ Istaknuto</span>}
         </div>
         <h1 className="text-4xl sm:text-5xl font-bold mb-4">{ch.name}</h1>
         <p className="text-lg text-zinc-400 max-w-3xl leading-relaxed">

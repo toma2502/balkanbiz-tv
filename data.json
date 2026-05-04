@@ -50,7 +50,8 @@
         "vijesti",
         "poduzetnistvo"
       ],
-      "description": "Poslovni magazin Lider — videointervjui s vrhunskim direktorima i analize hrvatskog poslovnog svijeta."
+      "description": "Poslovni magazin Lider — videointervjui s vrhunskim direktorima i analize hrvatskog poslovnog svijeta.",
+      "avatar": "https://yt3.googleusercontent.com/G7EgGB2JZ_tGQ4BPq3-EGrppOs4LC8WP7khy_u9w9wQZJYdfNqeQrb1pGxY0b8qqWBIbk53Ksw=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "netokracija",
@@ -64,7 +65,8 @@
         "poduzetnistvo"
       ],
       "description": "Vodeći regionalni magazin za one koji žive od interneta — startupi, digitalni biznis, marketing.",
-      "channelId": "UCIyITxupYIEJHgZu1-B4TgA"
+      "channelId": "UCIyITxupYIEJHgZu1-B4TgA",
+      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_khFkfjSrYqr_TextsgnAYA69-N2Vh1y6EAGRo6wUY=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "radimposvom",
@@ -78,7 +80,8 @@
         "edukacija"
       ],
       "description": "Tea Žavacki — primjenjive strategije za freelancere i poduzetnike koji rade po svom.",
-      "channelId": "UCVc_ZvNzFt1S2rtfND6_c1w"
+      "channelId": "UCVc_ZvNzFt1S2rtfND6_c1w",
+      "avatar": "https://yt3.googleusercontent.com/phB3FVE1m7ddPiCN_ZLMVcPhgje35hdNs8Q2SDAG5Cx_C5a9dhJrC-H-rdS4bIIIeGLCZP6KSg=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "ramiro",
@@ -102,7 +105,8 @@
       "categories": [
         "financije"
       ],
-      "description": "Kriptovalute, Bitcoin, blockchain — analize, vijesti i trendovi za hrvatsko tržište."
+      "description": "Kriptovalute, Bitcoin, blockchain — analize, vijesti i trendovi za hrvatsko tržište.",
+      "avatar": "https://yt3.googleusercontent.com/rHjGVWocSNyIJXH9Ek-EeeR8-hruFBGK_kQQgAa7HCdUw5aWqogdNodtYerykvyGjsjU2-SVRg=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "svijet-kripta",
@@ -114,7 +118,8 @@
       "categories": [
         "financije"
       ],
-      "description": "Svijet kriptovaluta, NFT-ova i blockchain projekata — recenzije i analize."
+      "description": "Svijet kriptovaluta, NFT-ova i blockchain projekata — recenzije i analize.",
+      "avatar": "https://yt3.googleusercontent.com/vI67O_xu4T-ugHzg2fEVytRW9Acde3fp5beyzOjmuZWs5iNzjhYLAhG0bYX6Hq8dkrou9XzLHg=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "biznis-price",
@@ -129,7 +134,8 @@
       ],
       "description": "Vladimir Stanković vodi #1 regionalni biznis podcast s 200+ epizoda i pričama uspješnih poduzetnika.",
       "priority": 1,
-      "channelId": "UCjVMDeGSsX-M7yTL821O-wQ"
+      "channelId": "UCjVMDeGSsX-M7yTL821O-wQ",
+      "avatar": "https://yt3.googleusercontent.com/FEsyHgRTgfiKXmW7r4f6YInLWY6jlM8wkovwgw28apV3A3OqD8BHI8zQmbV5UdTyqV1hks6h=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "pojacalo",
@@ -144,7 +150,8 @@
       ],
       "description": "Ivan Minić — serijski internet poduzetnik vodi vodeći podcast o poduzetništvu i tehnologiji.",
       "priority": 1,
-      "channelId": "UC_NvcpQIWA7TXh1qhjlPCuQ"
+      "channelId": "UC_NvcpQIWA7TXh1qhjlPCuQ",
+      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kBhvAf5dD3fCz5I6n6R_gzagqUQ1wYzKyG5bUTwvvsAQ=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "imarketing",
@@ -157,7 +164,8 @@
         "marketing"
       ],
       "description": "20+ godina iskustva u digitalnom marketingu — branding, online business, savjeti.",
-      "channelId": "UCuFQmnadE6mMhtY9EyOX65w"
+      "channelId": "UCuFQmnadE6mMhtY9EyOX65w",
+      "avatar": "https://yt3.googleusercontent.com/5bLTkF-fGkbuNvRcqkgDDes3qtNmGRzxAgf85CuzPBzFYemiYJEbcIaQaGm0eXaMSs-Bxi48ELI=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "marketing-srbija",
@@ -171,7 +179,8 @@
         "edukacija"
       ],
       "description": "Tutoriali i savjeti za online vještine, online prodaju i pokretanje biznisa.",
-      "channelId": "UCRao_v10ale51qD1UdFvh-w"
+      "channelId": "UCRao_v10ale51qD1UdFvh-w",
+      "avatar": "https://yt3.googleusercontent.com/auRS3DiiDZgChrZ8GJd3E-Hf4JT-1v5z_EkdK9-gZFdwa8NcYRZuk6rM7YzWnnE3ESwkD-dlaA=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "licne-finansije",
@@ -185,7 +194,8 @@
         "edukacija"
       ],
       "description": "Osobne financije, krediti, investiranje — praktični savjeti za balkansko tržište.",
-      "channelId": "UCnZ7jC5V0aEsnZz2TgE-DSg"
+      "channelId": "UCnZ7jC5V0aEsnZz2TgE-DSg",
+      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kY1aNdZ1f69JR35wXAEAJsJaHCMQRJcB6NIStnXcCHlw=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "podcast-inkubator",
@@ -199,7 +209,8 @@
         "vijesti"
       ],
       "description": "Jedan od najpoznatijih podcasta u regiji — gosti iz biznisa, sporta, medija i javnog života.",
-      "channelId": "UCv3Ob6T4cg4Okj0iGTdeIbg"
+      "channelId": "UCv3Ob6T4cg4Okj0iGTdeIbg",
+      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kkprdA8Rxsrl3Vg04SRgHpD1LNh1u1Zi6JKPLRb7jEuw=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "balkan-business",
@@ -236,7 +247,8 @@
       ],
       "description": "450+ slovenskih poduzetnika dijeli iskustva, brojeve i odluke iz prakse.",
       "priority": 1,
-      "channelId": "UCZl3sRNY1Efy8txjJRgCr4g"
+      "channelId": "UCZl3sRNY1Efy8txjJRgCr4g",
+      "avatar": "https://yt3.googleusercontent.com/UXijCbl-xCHs28Mb4QEQLP55pupiwXmJs__MpCjPX3IJtGxQy8qVpbZMIrqn4ANvZASYmoJL=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "zavod-mladi",
@@ -249,7 +261,8 @@
         "poduzetnistvo",
         "edukacija"
       ],
-      "description": "Slovenska neprofitna organizacija za podršku mladim poduzetnicima."
+      "description": "Slovenska neprofitna organizacija za podršku mladim poduzetnicima.",
+      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_n3XyjOUgkQKyZagKdbnwfaVvLMhznqNzVn3BLCUTD_IA=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "zan-nekrep",
@@ -273,7 +286,9 @@
         "poduzetnistvo",
         "edukacija"
       ],
-      "description": "Mentor2Millions workshops — izlazak iz stagnacije za poduzetnike."
+      "description": "Mentor2Millions workshops — izlazak iz stagnacije za poduzetnike.",
+      "channelId": "UCVLpfMs96l3DEcABHQuKpLg",
+      "avatar": "https://yt3.googleusercontent.com/naONoYQ9bEjo27oejilHrJaIjf4GYB5Vn6bUZwYtYtfuua9HTYsgNnLWcsC1OdLZvPcV1bWF=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "smiljan-mori",
@@ -299,7 +314,8 @@
         "poduzetnistvo"
       ],
       "description": "RTV SLO Val202 — prilike, novi tržišta, investicije, natječaji.",
-      "channelId": "UC8LtEin3o_XkagXgEOFbGGA"
+      "channelId": "UC8LtEin3o_XkagXgEOFbGGA",
+      "avatar": "https://yt3.googleusercontent.com/dp_yDv4lTzcBKFWHqam0EgohD6OqEJM4U7ko4962CN7cRhEGWHH9_02fwvxgcy0O7xW_wLhGEco=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "srce-bije",
@@ -312,7 +328,8 @@
         "liderstvo"
       ],
       "description": "RTV SLO — vodenje, razvoj poduzeća, izazovi vrhunskih managera.",
-      "channelId": "UC7ww4LZFRC3Na4AodWebTAA"
+      "channelId": "UC7ww4LZFRC3Na4AodWebTAA",
+      "avatar": "https://yt3.googleusercontent.com/7dnxnKwDxfVp2CNsyi5_Tal3iaUKnOezDRUs96DfwHdcrvNKq3T5H7YWtG60wd2GYdKmT9D1=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "rastezanja",
@@ -326,7 +343,8 @@
         "marketing"
       ],
       "description": "Tehnologija, inovacije i customer experience u suvremenom poslovanju.",
-      "channelId": "UC_tBHxgVQfgLAzFaC6mXKig"
+      "channelId": "UC_tBHxgVQfgLAzFaC6mXKig",
+      "avatar": "https://yt3.googleusercontent.com/cWQQT5d1yg4eDltSfRO4VksZv1nIaU4_yDKcY-QtJXeH-RXP0TcHxqgf-04Rd0KZ6Xl4VD_W9A=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "kocovski",
@@ -339,7 +357,8 @@
         "poduzetnistvo",
         "liderstvo"
       ],
-      "description": "Преобликување го бизнисот да ти служи — makedonski biznis mindset."
+      "description": "Преобликување го бизнисот да ти служи — makedonski biznis mindset.",
+      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_nL6am7486ms_szaSjyIthFrEJZ7WCpnMi9lx6wPpjOqL0=s240-c-k-c0x00ffffff-no-rj"
     }
   ]
 }
