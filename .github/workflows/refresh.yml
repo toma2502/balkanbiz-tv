@@ -1,0 +1,14 @@
+name: Refresh channel cache
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel revalidation
+        run: |
+          curl -fsS "https://balkanbiz-tv-app.vercel.app/api/cron/refresh"
