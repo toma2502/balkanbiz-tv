@@ -54,21 +54,6 @@
       "avatar": "https://yt3.googleusercontent.com/G7EgGB2JZ_tGQ4BPq3-EGrppOs4LC8WP7khy_u9w9wQZJYdfNqeQrb1pGxY0b8qqWBIbk53Ksw=s240-c-k-c0x00ffffff-no-rj"
     },
     {
-      "id": "netokracija",
-      "name": "Netokracija",
-      "country": "HR",
-      "language": "hr",
-      "url": "https://www.youtube.com/@Netokracija",
-      "handle": "Netokracija",
-      "categories": [
-        "tech",
-        "poduzetnistvo"
-      ],
-      "description": "Vodeći regionalni magazin za one koji žive od interneta — startupi, digitalni biznis, marketing.",
-      "channelId": "UCIyITxupYIEJHgZu1-B4TgA",
-      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_khFkfjSrYqr_TextsgnAYA69-N2Vh1y6EAGRo6wUY=s240-c-k-c0x00ffffff-no-rj"
-    },
-    {
       "id": "radimposvom",
       "name": "#radimposvom",
       "country": "HR",
@@ -234,21 +219,6 @@
       "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_nL6am7486ms_szaSjyIthFrEJZ7WCpnMi9lx6wPpjOqL0=s240-c-k-c0x00ffffff-no-rj"
     },
     {
-      "id": "telegram-hr",
-      "name": "Telegram.hr",
-      "country": "HR",
-      "language": "hr",
-      "url": "https://www.youtube.com/@TelegramhrVideo",
-      "handle": "TelegramhrVideo",
-      "categories": [
-        "vijesti",
-        "poduzetnistvo"
-      ],
-      "description": "Telegram.hr — društvene, poslovne, tech i karijere teme. Intervjui sa ženama na vodećim pozicijama, analiza poslovnih trendova.",
-      "channelId": "UCZ8jRkBWJjyIhXcQa8o8LSQ",
-      "avatar": "https://yt3.googleusercontent.com/DXpW_XupMfUOuvI8RWq1tiGHicSkHrhYNasG7cfXkFWE2rMC5bdNl88AhSP-wwWJOuJaXvdQ=s240-c-k-c0x00ffffff-no-rj"
-    },
-    {
       "id": "akta-ba",
       "name": "Akta.ba",
       "country": "BA",
@@ -290,21 +260,6 @@
       "description": "Dubinski intervjui s znanstvenicima, poduzetnicima, diplomatima i intelektualcima koji oblikuju europsku i svjetsku politiku."
     },
     {
-      "id": "tech-talk-rs",
-      "name": "Tech Talk Hub",
-      "country": "RS",
-      "language": "sr",
-      "url": "https://www.youtube.com/@TechTalkHub",
-      "handle": "TechTalkHub",
-      "categories": [
-        "tech",
-        "poduzetnistvo"
-      ],
-      "description": "Srpski startup inkubator i podcast za rane IT startupe — tehnologija, growth, financije.",
-      "channelId": "UCxKOIQlO5Uw3hULP4AIzv2A",
-      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_ldcqIjk3u_wRvCk5k-D5jf9XUJ7ofgOrQepsay8Y-kubvPWVEhgpZuPf-DU0EM_N3Y9Q=s240-c-k-c0x00ffffff-no-rj"
-    },
-    {
       "id": "bloomberg-adria",
       "name": "Bloomberg Adria",
       "country": "HR",
@@ -319,20 +274,6 @@
       "description": "Prva multiplatformska mreža za ekonomske i poslovne vijesti u Adriatic regiji — analize, intervjui, tržišta.",
       "priority": 1,
       "avatar": "https://yt3.googleusercontent.com/UC0rxaswOGuhRXfiVPYwhSZBVMJPayAnmuisnKWe8M4wTnMkaTXaKDuizGw7TLP-o6FMMqLmcw=s240-c-k-c0x00ffffff-no-rj"
-    },
-    {
-      "id": "mladi-poduzetnik-hr",
-      "name": "Mladi poduzetnik",
-      "country": "HR",
-      "language": "hr",
-      "url": "https://www.youtube.com/channel/UCuKMGQICbSumesEfgGFTiZg",
-      "channelId": "UCuKMGQICbSumesEfgGFTiZg",
-      "categories": [
-        "poduzetnistvo",
-        "edukacija"
-      ],
-      "description": "Kanal za mlade poduzetnike — savjeti za pokretanje obrta, prijava na natječaje, financiranje, marketing.",
-      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_m8cDc-SqcwlBBIIB-ytDj_QfT0hikdDUYva-EVpn8=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "privredna-komora-srbije",
