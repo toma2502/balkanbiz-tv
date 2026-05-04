@@ -289,6 +289,150 @@
       ],
       "description": "Privredna komora Srbije — događaji, edukacije, intervjui s direktorima, prilike za izvoz.",
       "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_nVVFVy7pB4dtXtq5haV9r3MnDei_EVFsp-34mBZJKm6w=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "nemanja-antic",
+      "name": "Nemanja B. Antić, MBA",
+      "country": "RS",
+      "language": "sr",
+      "url": "https://www.youtube.com/channel/UCvr45SYl3-izIm7wbSkpSVA",
+      "channelId": "UCvr45SYl3-izIm7wbSkpSVA",
+      "categories": [
+        "poduzetnistvo",
+        "liderstvo",
+        "financije"
+      ],
+      "description": "Srpski poduzetnik i investitor - savjeti o stagnaciji, rastu, biznis principima.",
+      "avatar": "https://yt3.googleusercontent.com/LFr5Vkf2haCRhTttPSoluoxSlm7hoT45PZeOjocuP6K3ma9BZSdMnUmVos8egY2veMDV5H8Mlw=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "moc-komunikacije",
+      "name": "Saša Tenodi - Moć komunikacije",
+      "country": "HR",
+      "language": "hr",
+      "url": "https://www.youtube.com/channel/UCV9U0DBy9mcqA9_F04lmBuw",
+      "channelId": "UCV9U0DBy9mcqA9_F04lmBuw",
+      "categories": [
+        "liderstvo",
+        "edukacija"
+      ],
+      "description": "Saša Tenodi - komunikacijske vještine za poduzetnike, lidere i prodajne timove.",
+      "avatar": "https://yt3.googleusercontent.com/OblT64s5i0fJ5WUA3v3McKCFNTkISEszMqradzxSTFCRbiZ5ukv_shwnAjMfuNILBEZOBAMv7xM=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "spotlight-tv",
+      "name": "Spotlight TV",
+      "country": "RS",
+      "language": "sr",
+      "url": "https://www.youtube.com/channel/UC95i7k4140I0Wrd5tCvTdAA",
+      "channelId": "UC95i7k4140I0Wrd5tCvTdAA",
+      "categories": [
+        "poduzetnistvo",
+        "tech",
+        "liderstvo"
+      ],
+      "description": "Spotlight TV - podcast intervjui s poduzetnicima, AI/tech ekspertima i osobnostima koje pomiču granice.",
+      "avatar": "https://yt3.googleusercontent.com/741YFEjjvcg2yD7KFm0h2ENO7cVW4k70JEGJApi-haoX5zsw6un73Zf0tyMIqnWF357vBXxz=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "stefan-gajic",
+      "name": "Stefan Gajić",
+      "country": "RS",
+      "language": "sr",
+      "url": "https://www.youtube.com/channel/UCaybh7ulw2AtDRUbeVTyc2w",
+      "channelId": "UCaybh7ulw2AtDRUbeVTyc2w",
+      "categories": [
+        "marketing",
+        "edukacija"
+      ],
+      "description": "Stefan Gajić - marketing edukacija i podcast Marketing u pokretu. Praktični savjeti za prodaju i brendiranje.",
+      "avatar": "https://yt3.googleusercontent.com/uTMHCNZ_hP3yIdy9Id1MD-rwS31THWUzJHoA0ICE7ymK0KcCLzYoFIU-f4MrCOkK3u1hMuWrYw=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "istok-pavlovic",
+      "name": "Istok Pavlović",
+      "country": "RS",
+      "language": "en",
+      "url": "https://www.youtube.com/channel/UCtSib8TwjQec-3AxIsz9wWQ",
+      "channelId": "UCtSib8TwjQec-3AxIsz9wWQ",
+      "categories": [
+        "tech",
+        "poduzetnistvo"
+      ],
+      "description": "Istok Pavlović - CEO Istok Media, fizičar i poduzetnik. AI, scaling startupa, budućnost tehnologije (engleski).",
+      "avatar": "https://yt3.googleusercontent.com/9Q3MYzDrN0tZ-RdURfhjFkrF-UX55Wlkza80yZb2LBg6vRbkuJhVEjSl2JzcS9xYxgy7fTEB=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "dan-za-podcast",
+      "name": "Dan Za Podcast by Kontra Agency",
+      "country": "HR",
+      "language": "hr",
+      "url": "https://www.youtube.com/channel/UC311piiPMAUnz08zuLgq9kw",
+      "channelId": "UC311piiPMAUnz08zuLgq9kw",
+      "categories": [
+        "marketing",
+        "poduzetnistvo"
+      ],
+      "description": "Dan Za Podcast - intervjui s agencijskim svijetom, marketingom i biznis liderima. Produkcija Kontra Agency.",
+      "avatar": "https://yt3.googleusercontent.com/zIRn9UQT9fRXhOTMQ6yU7x9joQ3uQGqHvii3csEFnO9XGcjKVTVHDiOtl7FshYpoBBGjzihO=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "ivan-kosogor",
+      "name": "Ivan Kosogor Podcast",
+      "country": "HR",
+      "language": "hr",
+      "url": "https://www.youtube.com/channel/UCTIZt55P0jf8ve4AwPgtbkQ",
+      "channelId": "UCTIZt55P0jf8ve4AwPgtbkQ",
+      "categories": [
+        "liderstvo",
+        "edukacija"
+      ],
+      "description": "Ivan Kosogor - perfekcionizam, mindset, osobni razvoj i poduzetnička psihologija.",
+      "avatar": "https://yt3.googleusercontent.com/zaeBxtxl6WBNTh1KEy6M1ayLDATKN1iGNwjy4R95i3vCDc1hovzAg805lD-9NBH5TkxydeUt=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "ja-preduzetnik",
+      "name": "Ja, Preduzetnik",
+      "country": "RS",
+      "language": "sr",
+      "url": "https://www.youtube.com/channel/UCvOIzuRE_NcJhG1WQMa961Q",
+      "channelId": "UCvOIzuRE_NcJhG1WQMa961Q",
+      "categories": [
+        "poduzetnistvo",
+        "edukacija"
+      ],
+      "description": "Ja, Preduzetnik - intervjui i shorts s preduzetnicima koji dijele iskustva, faze rasta i biznis lekcije.",
+      "avatar": "https://yt3.googleusercontent.com/eolqbUU9ySeoj0KojCQzxZ7EG1p0cpvc1plppCrDFsh0hl9a0sxLTRrs-7f9e6-JvXG466QKTg=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "nedim-sabic-seo",
+      "name": "Nedim Šabić - SEO škola",
+      "country": "BA",
+      "language": "bs",
+      "url": "https://www.youtube.com/channel/UC7q4Z9iKutJetmpcbmFQGSQ",
+      "channelId": "UC7q4Z9iKutJetmpcbmFQGSQ",
+      "categories": [
+        "marketing",
+        "edukacija",
+        "tech"
+      ],
+      "description": "Nedim Šabić - SEO škola, ključne riječi, sustav za organsko rangiranje. Strict marketing edukacija.",
+      "avatar": "https://yt3.googleusercontent.com/NbfGFRRpGRH3ToAHLkc3TBxi-HMeBu3EqItLc9vFoGl8zzr8HvBn7_exUkb-LUIJTLGYdGex=s240-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "stepenicama-uspeha",
+      "name": "Stepenicama Uspeha",
+      "country": "RS",
+      "language": "sr",
+      "url": "https://www.youtube.com/channel/UCxiQJmziwuGW6MQCpzxnNOw",
+      "channelId": "UCxiQJmziwuGW6MQCpzxnNOw",
+      "categories": [
+        "poduzetnistvo",
+        "marketing",
+        "edukacija"
+      ],
+      "description": "Stepenicama Uspeha - dubinski intervjui s poduzetnicima, marketinškim agencijama, dizajnerima i kreatorima koji uspješno grade biznise.",
+      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_lA9bwWE-YbE6z3NJEEzBYrEgq7qIEsVm5k2sJfuwpl9dM=s240-c-k-c0x00ffffff-no-rj"
     }
   ]
 }
