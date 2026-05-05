@@ -58,3 +58,8 @@ android/*.idsig
 
 # Bubblewrap signing config — contains password references
 android/twa-manifest.json
+
+# Sensitive — never commit
+android/.keystore-password
+android/*.compromised.backup
+android/*.backup
