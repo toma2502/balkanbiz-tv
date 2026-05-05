@@ -39,3 +39,22 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Android / Bubblewrap build artifacts
+android/.gradle/
+android/build/
+android/app/build/
+android/.idea/
+android/local.properties
+android/manifest-checksum.txt
+
+# NEVER commit these — they are app signing identity
+android/android.keystore
+*.keystore
+*.jks
+android/*.apk
+android/*.aab
+android/*.idsig
+
+# Bubblewrap signing config — contains password references
+android/twa-manifest.json
