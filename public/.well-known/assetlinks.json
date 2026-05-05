@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "live.balkanbiz.twa",
+      "sha256_cert_fingerprints": [
+        "8C:7D:EA:D9:2E:E1:AD:FE:92:E9:D1:8C:F7:12:76:29:B8:62:CA:AC:25:41:B2:53:2A:24:74:71:FB:55:95:3F"
+      ]
+    }
+  }
+]
