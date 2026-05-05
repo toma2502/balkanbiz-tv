@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-05-04",
+  "updated": "2026-05-05",
   "categories": [
     {
       "id": "poduzetnistvo",
@@ -70,15 +70,17 @@
     },
     {
       "id": "ramiro",
-      "name": "Ramiro - Psihologija uspjeha",
+      "name": "Tomislav Ramljak — Ramiro",
       "country": "HR",
       "language": "hr",
-      "url": "https://www.ramiro.hr/",
+      "url": "https://www.youtube.com/channel/UCAYWBMRNwiYreSOsH-dNHbw",
       "categories": [
         "liderstvo",
         "edukacija"
       ],
-      "description": "Razgovori s uspješnim vlasnicima tvrtki o tajnama postizanja velikih rezultata."
+      "description": "Tomislav Ramljak (Ramiro Hrvatska) — razgovori s uspješnim vlasnicima tvrtki o tajnama postizanja velikih rezultata.",
+      "channelId": "UCAYWBMRNwiYreSOsH-dNHbw",
+      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kPlTt3f0ag02fIOz2RmGE02A0SeoEU9uAao7zLup50-l2H=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "crypto-hrvatska",
@@ -187,22 +189,13 @@
       "name": "Balkan Business Podcast",
       "country": "RS",
       "language": "sr",
-      "url": "https://podcasts.apple.com/mz/podcast/balkan-business-podcast-biznis-na-balkanu",
+      "url": "https://www.youtube.com/channel/UCyaOQQqKKhVA36EZueFHL6w",
       "categories": [
         "poduzetnistvo"
       ],
-      "description": "Praktične smjernice za balkanske poduzetnike — povećanje prihoda i rezultata."
-    },
-    {
-      "id": "marketing-srcem",
-      "name": "Marketing sa srcem & brend sa dušom",
-      "country": "BA",
-      "language": "bs",
-      "url": "https://podcasts.apple.com/us/podcast/marketing-sa-srcem-brend-sa-du%C5%A1om",
-      "categories": [
-        "marketing"
-      ],
-      "description": "Bosanski podcast o marketingu, produktivnosti, prodaji i online brandingu."
+      "description": "Balkan Business Podcast — Biznis na Balkanu. Praktične smjernice za balkanske poduzetnike.",
+      "channelId": "UCyaOQQqKKhVA36EZueFHL6w",
+      "avatar": "https://yt3.googleusercontent.com/Vl__jMO9qLVzGjiZmv9Dx8XPw0hB7EZ-s6JGAXrYfxWkbldDrMeHalEmI8rJbmQ1LlNZwRdgrA=s240-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "kocovski",
@@ -246,18 +239,6 @@
       ],
       "description": "Najposjećeniji BiH news portal — biznis, investicije, valute, burze, projekti i priče uspjeha.",
       "avatar": "https://yt3.googleusercontent.com/XCYVRAPpWEIi-6WLK6eXyu8rGbqgEvaaqjo1mUjIuVuJPy0u1c65fYVlZ2Lg4yyg8jIK-OH-=s240-c-k-c0x00ffffff-no-rj"
-    },
-    {
-      "id": "romano-bolkovic",
-      "name": "Romano Bolković — 1 na 1",
-      "country": "HR",
-      "language": "hr",
-      "url": "https://www.youtube.com/playlist?list=PLuEWODEWd3kOBpCz0FqspWIbF3t4hdE8b",
-      "categories": [
-        "liderstvo",
-        "edukacija"
-      ],
-      "description": "Dubinski intervjui s znanstvenicima, poduzetnicima, diplomatima i intelektualcima koji oblikuju europsku i svjetsku politiku."
     },
     {
       "id": "bloomberg-adria",
